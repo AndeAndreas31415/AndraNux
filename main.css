@@ -1,8 +1,24 @@
+body {
+  background: black;
+}
+
+img.cursor {
+  z-index: 1;
+  position: absolute;
+  top: 48%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  transform: rotate(280deg);
+  width: 5%;
+}
+
 div.Dh {
   z-index: 0;
   visibility: visible;
 }
 p.Hello {
+  padding: 10%;
+  background: radial-gradient(white 10%,black 70%);
   position: absolute;
   top: 50%;
   left: 50%;
