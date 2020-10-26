@@ -2,29 +2,42 @@ body {
   background: black;
 }
 
-img.cursor {
+img.cursor_img {
   z-index: 1;
   position: absolute;
-  top: 48%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  transform: rotate(280deg);
-  width: 5%;
+  top: 42%;
+  left: 91%;
+  transform: translate(-50%, -50%) rotate(280deg);
+  width: 10%;
+  transition: 0.5s;
 }
 
+img.cursor_img:hover{
+  filter: sepia(100%) drop-shadow(-5px 5px 5px white);
+  width: 15%;
+  transition: 2.5s;
+}
 div.Dh {
   z-index: 0;
   visibility: visible;
-}
-p.Hello {
-  padding: 10%;
-  background: radial-gradient(white 10%,black 70%);
+  padding: 3%;
+  background: radial-gradient(white 5%,grey 35%,black 72%);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+p.Hello {
   font-size: 500%;
   font-weight: bold;
+  transition: 0.5s;
+}
+
+p.Hello:hover {
+  padding: 0.5em;
+  transition: 1s;
+  filter: drop-shadow(10px 10px 1px #75b975c4);
 }
 
 div.Dg {
