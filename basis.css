@@ -18,6 +18,17 @@ img.cursor_img:hover{
   width: 15%;
   transition: 2.5s;
 }
+
+img.chick{
+  filter: invert(50%);
+  width: 5%;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
 div.Dh {
   z-index: 0;
   visibility: visible;
@@ -42,29 +53,25 @@ p.Hello:hover {
 }
 
 div.Dg {
-  z-index: 1;
   visibility: hidden;
 }
 a.Github {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 5%;
+  left: 5%;
   transform: translate(-50%, -50%);
   font-size: 250%;
-  font-weight: bold;
 }
 
 div.DW {
-  z-index: 2;
   visibility: hidden;
 }
 a.Website {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 15%;
+  left: 5%;
   transform: translate(-50%, -50%);
-  font-size: 50%;
-  color: #f2f2f2;
+  font-size: 250%;
 }
 
 
