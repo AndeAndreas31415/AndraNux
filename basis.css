@@ -1,6 +1,6 @@
 /* index */
 body.ib{
-  background: black;
+  background:#222;
 }
 
 img.cursor_img {
@@ -24,7 +24,7 @@ img.chick{
   width: 5%;
   position: absolute;
   top: 90%;
-  left: 90%;
+  left: 95%;
   transform: translate(-50%, -50%);
   visibility: hidden;
 }
@@ -33,7 +33,7 @@ div.Dh {
   z-index: 0;
   visibility: visible;
   padding: 3%;
-  background: radial-gradient(white 5%,grey 35%,black 72%);
+  background: radial-gradient(white 0.5%,#222 72%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -54,6 +54,7 @@ p.Hello:hover {
 
 div.Dg {
   visibility: hidden;
+  
 }
 a.Github {
   position: absolute;
@@ -61,17 +62,19 @@ a.Github {
   left: 5%;
   transform: translate(-50%, -50%);
   font-size: 250%;
+  color: white;
 }
 
 div.DW {
   visibility: hidden;
 }
-a.Website {
+a.Repo {
   position: absolute;
-  top: 15%;
+  top: 95%;
   left: 5%;
   transform: translate(-50%, -50%);
   font-size: 250%;
+  color: white;
 }
 
 
