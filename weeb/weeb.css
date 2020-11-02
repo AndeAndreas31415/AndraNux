@@ -1,4 +1,37 @@
 /* manga */
 div.manga{
-  visibility: hidden;
+	/*! visibility: hidden; */
+}
+
+div.manga div {
+  width: 100px;
+  height: 200px;
+  padding: 10px;
+  border: 2.5px solid black;
+  display: inline-block;
+  margin: auto;
+}
+
+div.manga div p{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Anime */
+div.anime{
+	/*! visibility: hidden; */
+}
+
+div.anime div {
+  width: 100px;
+  height: 200px;
+  padding: 10px;
+  border: 2.5px solid black;
+  display: inline-block;
+  margin: auto;
+}
+
+div.anime div p{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
