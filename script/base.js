@@ -26,6 +26,17 @@ function repo(){
 	});
 }
 
+function myswitch(){
+	var cb = document.getElementById("check");
+	if (cb.checked == true){
+		document.getElementById("body").style.backgroundColor = "#fff";
+		document.getElementById("main").style.background = "#fff";
+	}else{
+		document.getElementById("body").style.backgroundColor = "#222";
+		document.getElementById("main").style.background = "radial-gradient(white 0.5%,#222 72%)";
+	}
+}
+
 function eggover(){
 	document.getElementById("egg").style.visibility = "visible";
 	github();

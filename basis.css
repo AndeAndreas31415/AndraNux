@@ -3,6 +3,58 @@ body.ib{
   background:#222;
 }
 
+div.sw{
+  position: absolute;
+  top: 5%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+}
+
+label.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+}
+
+label.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+span.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  transition: 0.1s;
+  border-radius: 10px;
+}
+
+span.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #222;
+  transition: 0.1s;
+  border-radius: 8px;
+}
+
+input:checked + .slider {
+  background-color: #a7ff00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
 img.cursor_img {
   z-index: 1;
   position: absolute;
