@@ -1,0 +1,66 @@
+html, body { 
+  padding: 0;
+  margin: 0;
+}
+
+div:not(.topic) {
+  width: 50%;
+  height: 50%;
+  float: left;
+}
+
+div.my {
+  background-color: yellow;
+  position: relative;
+}
+
+div.music {
+  background:blue;
+  position: relative;
+}
+
+div.MA {
+  background:green;
+  position: relative;
+}
+
+div.work {
+  background:red;
+  position: relative;
+}
+
+div.my p {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
+
+div.music p {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
+
+div.MA p {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
+
+div.work p {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
