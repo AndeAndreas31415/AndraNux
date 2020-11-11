@@ -58,10 +58,10 @@ input:checked + .slider:before {
 img.cursor_img {
   z-index: 1;
   position: absolute;
-  top: 42%;
-  left: 91%;
+  top: 39%;
+  left: 92%;
   transform: translate(-50%, -50%) rotate(280deg);
-  width: 10%;
+  width: 15%;
   transition: 0.5s;
 }
 
