@@ -1,7 +1,3 @@
-function brain(){
-	document.location = "main.html"
-}
-
 function github(){
 	document.getElementById("gh").style.visibility = "visible";
 	document.getElementById("gh").animate([
@@ -24,18 +20,7 @@ function repo(){
 	],{
 		duration: 5000,
 	});
-}
-
-function myswitch(){
-	var cb = document.getElementById("check");
-	if (cb.checked == true){
-		document.getElementById("body").style.backgroundColor = "#fff";
-		document.getElementById("main").style.background = "#fff";
-	}else{
-		document.getElementById("body").style.backgroundColor = "#222";
-		document.getElementById("main").style.background = "radial-gradient(white 0.5%,#222 72%)";
-	}
-}
+}	
 
 function eggover(){
 	document.getElementById("egg").style.visibility = "visible";

@@ -1,6 +1,7 @@
 /* index */
 body.ib{
-  background:#222;
+  transition: 2s;
+  background: #222;
 }
 
 div.sw{
@@ -82,6 +83,8 @@ img.chick{
 }
 
 div.Dh {
+  border-radius: 50%;
+  transition: 2s;
   z-index: 0;
   visibility: visible;
   padding: 3%;
@@ -95,18 +98,17 @@ div.Dh {
 p.Hello {
   font-size: 500%;
   font-weight: bold;
-  transition: 0.5s;
+  transition: 2s;
 }
 
 p.Hello:hover {
   padding: 0.5em;
-  transition: 1s;
+  transition: 2s;
   filter: drop-shadow(10px 10px 1px #75b975c4);
 }
 
 div.Dg {
   visibility: hidden;
-  
 }
 a.Github {
   position: absolute;
