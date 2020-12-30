@@ -37,12 +37,17 @@ div.anime div p{
 }
 
 /* jp */
-div.char{
+p.cj{
   position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);}
-p.cj{
+  transform: translate(-50%, -50%);
   font-size: 500%;
-  font-weight: bold;
+}
+body.ib:hover{
+  background-color: #00150f;
+  color: #fffffffa;
+  transition: 2s;
 }
