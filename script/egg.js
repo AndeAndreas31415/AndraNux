@@ -31,4 +31,28 @@ function eggover(){
 function egg(){
 	document.getElementById("egg").style.visibility = "visible";
 	console.log("please don't smash eggs");
+	console.log(`%c
+. . . . . . . . . . . . . . . . . . . . .
+.                                       .
+.                                       .
+.                ████████               .
+.              ██        ██             .
+.            ██▒▒▒▒        ██           .
+.          ██▒▒▒▒▒▒      ▒▒▒▒██         .
+.          ██▒▒▒▒▒▒      ▒▒▒▒██         .
+.        ██  ▒▒▒▒        ▒▒▒▒▒▒██       .
+.        ██                ▒▒▒▒██       .
+.      ██▒▒      ▒▒▒▒▒▒          ██     .
+.      ██      ▒▒▒▒▒▒▒▒▒▒        ██     .
+.      ██      ▒▒▒▒▒▒▒▒▒▒    ▒▒▒▒██     .
+.      ██▒▒▒▒  ▒▒▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒██     .
+.        ██▒▒▒▒  ▒▒▒▒▒▒    ▒▒▒▒██       .
+.        ██▒▒▒▒            ▒▒▒▒██       .
+.          ██▒▒              ██         .
+.            ████        ████           .
+.                ████████               .
+.                                       .
+.                                       .
+.        please don't smash eggs        .
+. . . . . . . . . . . . . . . . . . . . .`,"color:#000000; background:#00ee00; font-family: monospace");
 }
