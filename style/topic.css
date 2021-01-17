@@ -1,17 +1,17 @@
-html,body {
+html,body{
   background-color:  black;
   padding: 0;
   margin: 0;
 }
 
-div:not(.topic) {
+div:not(.topic):not(.blur){
   width: 50%;
   height: 50%;
   float: left;
 }
 
-div.my {
-  background-color: yellow;
+div.my{
+  background-color: black;
   position: relative;
   transition: 0.5s;
 }
@@ -21,8 +21,18 @@ div.my:hover{
   transition: 2.5s;
 }
 
-div.music {
-  background:blue;
+div.my p{
+  color: green;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
+
+div.music{
+  background:linear-gradient(45deg,#b3b3b3,#464545cc,#b3b3b3);;
   position: relative;
   transition: 0.5s;
 }
@@ -32,65 +42,75 @@ div.music:hover{
   transition: 2.5s;
 }
 
-div.MA {
-  background:green;
+div.music p{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
+div.music a{
+  color: white;
+}
+
+div.blur{
   position: relative;
+  background:linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);
+  height: 100%;
+  filter: blur(4px) grayscale(25%);
   transition: 0.5s;
 }
 
-div.MA:hover{
+div.blur:hover{
   border-radius: 50px 0px 50px 100px;
   transition: 2.5s;
 }
 
-div.work {
-  background:red;
+div.MA{
+  position: relative;
+}
+
+div.MA a{
+  color: black;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  font-weight: bold;
+}
+
+a.anime{
+  top: 60%;
+  left: 45%;
+}
+
+a.manga{
+  top: 40%;
+  left: 45%;
+}
+
+div.work{
+  background:white;
   position: relative;
   transition: 0.5s;
 }
 
-div.work:hover {
+div.work:hover{
   border-radius: 0px 50px 100px 50px;
   transition: 2.5s;
 }
 
-div.my p {
+div.work p{
   position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  font-size: 250%;
+  margin: 10;
+  font-size: 300%;
   font-weight: bold;
 }
 
-div.music p {
+div.work iframe{
   position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  font-size: 250%;
-  font-weight: bold;
-}
-
-div.MA p {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  font-size: 250%;
-  font-weight: bold;
-}
-
-div.work p {
-  position: absolute;
-  margin: 5;
-  font-size: 200%;
-  font-weight: bold;
-}
-div.work iframe {
-  position: absolute;
-  margin: 5%;
+  margin: 8%;
   width: 90%;
-  height: 80%;
+  height: 70%;
   border: 5px solid black;
 }
