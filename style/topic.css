@@ -11,7 +11,7 @@ div:not(.topic):not(.blur){
 }
 
 div.my{
-  background-color: black;
+  background-color: #0A0B0A;
   position: relative;
   transition: 0.5s;
 }
@@ -32,7 +32,7 @@ div.my p{
 }
 
 div.music{
-  background:linear-gradient(45deg,#b3b3b3,#464545cc,#b3b3b3);;
+  background:#20a4f3;
   position: relative;
   transition: 0.5s;
 }
@@ -42,23 +42,28 @@ div.music:hover{
   transition: 2.5s;
 }
 
-div.music p{
+div.music a{
   position: absolute;
-  top: 40%;
-  left: 45%;
   transform: translate(-50%, -50%);
   font-size: 250%;
   font-weight: bold;
-}
-div.music a{
   color: white;
+}
+
+a.yt{
+  top: 30%;
+  left: 45%;
+}
+
+a.sf{
+  top: 50%;
+  left: 45%;
 }
 
 div.blur{
   position: relative;
-  background:linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);
+  background:#ff7e29;
   height: 100%;
-  filter: blur(4px) grayscale(25%);
   transition: 0.5s;
 }
 
@@ -90,7 +95,7 @@ a.manga{
 }
 
 div.work{
-  background:white;
+  background:#FEF3D7;
   position: relative;
   transition: 0.5s;
 }
