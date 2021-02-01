@@ -2,7 +2,12 @@ div.squartimer img{
 	width: 50%;
 	height: auto;
 }
+
 div.squartimer summary{
 	font-size: 2em;
 	font-weight: bold;
+}
+
+div.squartimer p{
+	font-size: 112.5%
 }
