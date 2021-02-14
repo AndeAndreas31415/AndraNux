@@ -4,7 +4,7 @@ html,body{
   margin: 0;
 }
 
-div:not(.topic):not(.blur){
+div:not(.topic):not(.blur):not(.lb){
   width: 50%;
   height: 50%;
   float: left;
@@ -112,10 +112,19 @@ div.work p{
   font-weight: bold;
 }
 
+div.lb{
+  height: 12%;
+}
+div.lb a{
+  font-size: 250%;
+  font-weight: bolder;
+  margin-left: 5px;
+  
+}
+
 div.work iframe{
   position: absolute;
-  margin: 8%;
+  margin-left: 5px;
   width: 90%;
-  height: 70%;
-  border: 5px solid black;
+  height: 87%;
 }
