@@ -4,7 +4,7 @@ html,body{
   margin: 0;
 }
 
-div:not(.topic):not(.blur):not(.lb){
+div.part{
   width: 50%;
   height: 50%;
   float: left;
@@ -29,6 +29,33 @@ div.my p{
   transform: translate(-50%, -50%);
   font-size: 250%;
   font-weight: bold;
+}
+
+div.sup{
+  position: relative;
+  top: 100%;
+  left: 99%;
+  float: left;
+  transform: translate(-100%, -100%);
+}
+
+div.sup a{
+  font-size: 200%;
+  font-weight: bolder;
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 2.5s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
 }
 
 div.music{
