@@ -4,3 +4,15 @@ div.buycoffe{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+div.pussy{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.pussy img{
+  width: auto;
+  height: auto;
+}
