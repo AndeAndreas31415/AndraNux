@@ -1,21 +1,34 @@
 /* manga */
 body.mh{
-  background-color: #001600;
+  background-color: #101414;
 }
 div.manga {
   width: 100px;
-  height: 110px;
+  height: 120px;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px dashed lightblue;
+  border-radius: 25px;
   display: inline-block;
   margin: 5px;
 }
 
-div.title,div.vol{
-  white-space: normal;
+div.im{
   text-align: center;
-  height: 100px;
-  color: white;
+}
+div.title{
+  height: 80px;
+  color: white;/*
+top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+}
+div.vol{
+  height: 30px;
+  color: lightgreen;
+}
+div.pub{
+  height: 10px;
+  color: yellow;
 }
 
 /* Anime */
