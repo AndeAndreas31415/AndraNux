@@ -1,10 +1,11 @@
 /* manga */
-body.mh{
+body.mh,body.ah{
   background-color: #101414;
 }
-div.manga {
+
+div.manga,div.serie {
   width: 100px;
-  height: 120px;
+  height: 140px;
   padding: 10px;
   border: 1px dashed lightblue;
   border-radius: 25px;
@@ -27,23 +28,8 @@ div.vol{
   color: lightgreen;
 }
 div.pub{
-  height: 10px;
+  height: 50px;
   color: yellow;
-}
-
-/* Anime */
-div.anime div {
-  width: 100px;
-  height: 200px;
-  padding: 10px;
-  border: 2.5px solid black;
-  display: inline-block;
-  margin: auto;
-}
-
-div.anime div p{
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
 }
 
 /* jp */
