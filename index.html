@@ -4,6 +4,8 @@
 		<title>Hidden Index</title>
 		<script src=script/egg.js></script>
 		<script src=script/fuc.js></script>
+		<script src=script/cookie.js></script>
+		<link rel="stylesheet" href="style/cookie.css">
 		<link rel="stylesheet" href=style/basis.css>
 		<link rel="icon" href="img/circle.png">
 	</head>
@@ -26,10 +28,28 @@
 			<a class="Repo" id="gp" href="https://github.com/AndeAndreas31415/AndraNux"> Website </a>
 		</div>
 		<img src="img/chicken.png" alt="chicken_egg" class="chick" id="egg"/>
+		<div class="cf" id="cookieban">
+			<div class="nB">
+				<div class="lang nBinfo">
+	      	<button id="deu" class="deuc langc" onclick="langfuc('deu')">Deutsch</button>
+		      <button id="eng" class="engc langc" onclick="langfuc('eng')">English</button>
+	    	</div>
+	    	<div class="text nBinfo">
+	      	<iframe src="cocky_lang/deu.html" class="cookyframe" id="cookietxtjs"></iframe>
+				</div>
+	    </div>
+	    <div class="button">
+	      <button id="red" class="accept yn" onclick="accept()">Yes</button>
+	      <button id="green" class="notaccept yn" onclick="notaccept()">No</button>
+	    </div>
+		</div>
 		<script>
 			document.getElementById("egg").addEventListener("mouseover", eggover);
 			document.getElementById("check").checked = false;
+			if (ca[1] === "accept") {
+		    console.log("Nice");
+				document.getElementById('cookieban').style.visibility = "hidden";
+		  }
 		</script>
-
 	</body>
 </html>

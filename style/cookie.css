@@ -1,0 +1,98 @@
+body{
+  background-color: #080d08;
+}
+
+div.cf{
+  position: absolute;
+  border: 7.5px black;
+  border-style: dashed;
+  border-radius: 15px;
+  background-color: #fff;
+  height: 600px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Language choice and File*/
+div.nB{
+  height: 505px;
+}
+
+div.nBinfo{
+  position: relative;
+  height: 100%;
+  float: left;
+}
+
+div.lang{
+  background-color: #9fd8df;
+  border: 5px #00000080;
+  border-style: none solid none none;
+  width: 133px;
+  border-radius: 10px 0px 0px 0px;
+}
+
+button.langc{
+  border: 3px #00000080;
+  border-style: solid none solid solid;
+  width: 100%;
+  height: 50px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #fffffff5;
+}
+
+div.text{
+  width: 262px;
+}
+
+iframe.cookyframe{
+  width: 100%;
+  height: 100%;
+  border: none; 
+}
+
+/* Yes / No */
+div.button{
+  background-color: #f5a0a0;
+  border: 5px #00000080;
+  border-style: solid none none none;
+  height: 90px;
+  position: relative;
+  border-radius: 0px 0px 10px 10px;
+}
+
+button.yn{
+  background-color: #f0d4c7;
+  color: #000;
+  position: absolute;
+  float: left;
+  top:50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button.accept{
+  left:30%;
+  border-radius: 15px 5px 5px 15px;
+}
+
+button.accept:hover{
+  transition: 1s;
+  background-color: red;
+}
+
+button.notaccept{
+  left:70%;
+  border-radius: 5px 15px 15px 5px;
+}
+
+button.notaccept:hover{
+  transition: 1s;
+  background-color: green;
+}
