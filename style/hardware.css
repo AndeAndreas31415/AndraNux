@@ -3,11 +3,6 @@ div.squartimer img{
 	height: auto;
 }
 
-div.squartimer summary{
-	font-size: 2em;
-	font-weight: bold;
-}
-
 div.squartimer p{
 	font-size: 112.5%
 }
@@ -86,8 +81,8 @@ body.Dso,body.Matrix img{
   height: auto;
 }
 
-/* CD-1257 LED-Matrix */
-body.Matrix summary{
+/* all */
+summary{
 	font-size: 2em;
 	font-weight: bold;
 }

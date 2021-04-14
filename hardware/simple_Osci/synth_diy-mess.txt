@@ -1,0 +1,4 @@
+  560 ohm | 20V | 20mA | 1.3kh
+  749 ohm | 20V | 15mA | 1.1kh
+   1k ohm | 20V | 10mA | 810h
+2.25k ohm | 20V |  5mA | 455hz
