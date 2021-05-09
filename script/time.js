@@ -1,5 +1,4 @@
-function timeUp(s){
-	if (s === "start") {
+
 		var countDownDate = new Date("Oct 8, 2020").getTime();
 
 		var x = setInterval(function() {
@@ -18,7 +17,7 @@ function timeUp(s){
 			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 	 
 			// Output the result
+			Document
 			console.log(weeks+"_"+days+"_"+hours+":"+minutes+":"+seconds)
- 		}, 500);
-	}
-}
+			document.getElementById("timeid").innerHTML ="Lifetime: "+weeks+"w_"+days+"d_"+hours+"h:"+minutes+"min:"+seconds+"s"
+ 		}, 1000);
