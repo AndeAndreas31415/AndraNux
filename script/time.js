@@ -18,6 +18,6 @@
 	 
 			// Output the result
 			Document
-			console.log(weeks+"_"+days+"_"+hours+":"+minutes+":"+seconds)
+			//console.log(weeks+"_"+days+"_"+hours+":"+minutes+":"+seconds)
 			document.getElementById("timeid").innerHTML ="Lifetime: "+weeks+"w_"+days+"d_"+hours+"h:"+minutes+"min:"+seconds+"s"
  		}, 1000);
