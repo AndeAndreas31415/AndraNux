@@ -4,7 +4,7 @@ body.mh,body.ah{
 }
 
 div.manga,div.serie {
-  width: 100px;
+  width: 120px;
   height: 140px;
   padding: 10px;
   border: 1px dashed lightblue;
@@ -18,10 +18,7 @@ div.im{
 }
 div.title{
   height: 80px;
-  color: white;/*
-top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
+  color: white;
 }
 div.vol{
   height: 30px;
