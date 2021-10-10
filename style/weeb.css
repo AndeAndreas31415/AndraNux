@@ -4,8 +4,8 @@ body.mh,body.ah{
 }
 
 div.manga,div.serie {
-  width: 120px;
-  height: 140px;
+  width: 200px;
+  height: 170px;
   padding: 10px;
   border: 1px dashed lightblue;
   border-radius: 25px;
@@ -17,14 +17,17 @@ div.im{
   text-align: center;
 }
 div.title{
-  height: 80px;
-  color: white;
+  font-size: 150%;
+  height: 120px;
+  color: #ffffffcc;
 }
 div.vol{
+  font-size: 125%;
   height: 30px;
   color: lightgreen;
 }
 div.pub{
+  font-size: 125%;
   height: 50px;
   color: yellow;
 }
