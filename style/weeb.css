@@ -2,17 +2,22 @@
 body.mh,body.ah{
   background-color: #101414;
 }
+div.mangas,div.Anime{
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
 
 div.manga,div.serie {
   width: 200px;
-  height: 170px;
-  padding: 10px;
+  height: 190px;
   border-color: lightblue;
   border-width: 2.5px;
   border-style: dashed;
   border-radius: 25px;
   display: inline-block;
-  margin: 5px;
+  margin: 2.5px;
 }
 
 div.manga,div.serie:not(div.fin):not(div.run){
@@ -30,21 +35,23 @@ div.run{
 }
 
 div.im{
+
   text-align: center;
 }
 div.title{
+  padding-top: 10px;
   font-size: 150%;
-  height: 120px;
+  height: 65%;
   color: #fff;
 }
 div.vol{
   font-size: 137.5%;
-  height: 30px;
+  height: 15%;
   color: lightgreen;
 }
 div.pub{
   font-size: 125%;
-  height: 50px;
+  height: 15%;
   color: yellow;
 }
 
