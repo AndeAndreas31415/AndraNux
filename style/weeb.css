@@ -20,7 +20,7 @@ div.manga,div.serie {
   margin: 2.5px;
 }
 
-div.manga,div.serie:not(div.fin):not(div.run){
+div.manga,div.serie:not(div.fin):not(div.run):not(div.list){
   box-shadow: 0px 0px 10px 5px #ffffff50 inset;
 }
 
@@ -35,9 +35,21 @@ div.run{
 }
 
 div.im{
-
   text-align: center;
 }
+
+div.ml,div.al{
+  margin-top: 80px;
+  font-size: 150%;
+  color: #fff;
+  text-decoration: underline;
+}
+
+div.list{
+  box-shadow: 0px 0px 25px 20px #ffff0060 inset,
+              0px 0px 12px 10px #ffffff60 inset;
+}
+
 div.title{
   padding-top: 10px;
   font-size: 150%;
