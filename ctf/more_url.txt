@@ -1,0 +1,9 @@
+https://www.vulnhub.com/
+https://ctf101.org/
+http://openctf.com/
+https://ctftime.org/
+https://overthewire.org/wargames/bandit/
+https://trailofbits.github.io/ctf/
+https://zaratec.github.io/ctf-practice/
+https://oops.cmdchallenge.com/
+https://12days.cmdchallenge.com/

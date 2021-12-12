@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../script/sha256.js"></script>
+    <link rel="stylesheet" href="../style/ctf.css">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <div class="backpd">
+        <div class="cpasswdiv" id="ipasswdiv">
+            <p class="passlock">&#128274</p>
+            <p class="passtxt">I need a string to unlock the answer of the way to <br> the NEXT LIFE.</p>
+            <input type="password" placeholder="look Console" id="passw" class="passw">
+        </div>
+    </div>
+    <div id="pages" class="pagesc">
+        <img src="tech-quadrat.jpg" alt="tech" class="bimg">
+        <div>
+            <a href="cmdchallenge.html" class="ctfac"><img src="directory/cmdchallenge-directory.png" alt="ph"></a>
+            <a href="ctf_withgoogle/not-fin.html" class="ctfac"><img src="directory/ctf_withgoogle-directory.png" alt="ph"></a>
+            <a href="ctflearn/not-fin.html" class="ctfac"><img src="directory/ctflearn-directory.png" alt="ph"></a>
+            <a href="hackthebox/not-fin.html" class="ctfac"><img src="directory/hackthebox-directory.png" alt="ph"></a>
+            <a href="tryhackme/not-fin.html" class="ctfac"><img src="directory/tryhackme-directory.png" alt="ph"></a>
+            <a href="xss-game.html" class="ctfac"><img src="directory/xss-game-directory.png" alt="ph"></a>
+            <a href="youtube/i.html" class="ctfac"><img src="directory/youtube-directory.png" alt="ph"></a>
+            <a href="more_url.txt" class="ctfac more"><img src="directory/more-directory.png" alt="ph"></a>
+        </div>
+        <div class="taskl">
+            <input id="rcb" class="rcbc" type="image" src="logout.png" alt="lo">
+            <div id="clockd" class="clockc">Clock</div>
+            <input id="inf" class="sourcebg" type="image" src="info.png" alt="if">
+        </div>
+    </div>
+    <script src="../script/pass.js"></script>
+    <script> 
+        document.getElementById("rcb").onclick = function() {removeCookie("ctf");window.location.reload(true);};
+        document.getElementById("inf").onclick = function() {window.location.href="https://pixabay.com/de/illustrations/technik-kreis-technologie-abstrakt-3041437/"};
+        function addZero(i) {
+            if (i < 10) {i = "0" + i}
+            return i;
+        }
+        function refreshTime() {
+            const d = new Date;
+            let formattedString = addZero(d.getHours())+":"+addZero(d.getMinutes());
+            document.getElementById("clockd").innerText = formattedString;
+        }setInterval(refreshTime, 1000);
+    </script>
+</body>
+</html>
