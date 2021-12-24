@@ -3,7 +3,7 @@ var xa = x.split("/")
 
 if (document.cookie == "") {
     console.log("Is this a CTF-Challange?");
-    console.log("Show in the login()");
+    console.log("Show in the script/pass.js <- login()");
     npass();
 } else {
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -24,9 +24,6 @@ if (document.cookie == "") {
                 brutfuc(cookie);
                 npass();
             }
-        } else {
-            console.log("THE Cookie <- 404");
-            npass();
         }
     }
 }
