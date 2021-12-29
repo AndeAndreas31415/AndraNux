@@ -1,136 +1,145 @@
 html,body{
-  background-color:  black;
   padding: 0;
   margin: 0;
 }
 
-div.part{
-  width: 50%;
-  height: 50%;
-  float: left;
+img.backimg{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
+div.card{
+  border-radius: 25px;
+  min-height: 100px;
+  height: 80%;
+  min-width: 200px;
+  width: 80%;
+  
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  flex-flow: wrap;
+}
+
+div.menu{
+  width: 25%;
+  height: 100%;
+}
+
+input.tab{
+  width: 100%;
+  height: 16.6%;
+  border-radius: 15px 0px 0px 15px;
+}
+
+div.topic{
+  height: 100%;
+  left:25%;
+  width: 75%;
+}
+
+div.part{
+  border-radius: 0px 25px 25px 0px;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* content of part from cards */
 div.my{
   background-color: #0A0B0A;
-  position: relative;
-  transition: 0.5s;
+  width: 75%;
+  height: 100%;
+  
 }
-
-div.my:hover{
-  border-radius: 100px 50px 0px 50px;
-  transition: 2.5s;
-}
-
 div.my p{
   color: green;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 45%;
+  left: 45%;
   transform: translate(-50%, -50%);
   font-size: 250%;
   font-weight: bold;
 }
 
-div.sup{
-  position: relative;
-  top: 100%;
-  left: 99%;
-  float: left;
-  transform: translate(-100%, -100%);
-}
-
-div.sup a{
-  font-size: 200%;
-  font-weight: bolder;
-  animation-name: rainbow;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  text-decoration: none;
-}
-
-@keyframes rainbow {
-  0% { color: #fc0303 }
-  17% { color: #45f52a }
-  34% { color: #2a7bf5 }
-  51% { color: #2af5e4 }
-  68% { color: #c92af5 }
-  85% { color: #f5dd2a }
-  100% { color: #66655d }
-}
-
+/*div.my img{
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+}*/
 div.music{
   background:#20a4f3;
-  position: relative;
-  transition: 0.5s;
-}
-
-div.music:hover{
-  border-radius: 50px 100px 50px 0px;
-  transition: 2.5s;
+  width: 75%;
+  height: 100%;
 }
 
 div.music a{
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 37%;
+  left: 37%;
   font-size: 250%;
   font-weight: bold;
   color: white;
 }
 
-a.yt{
-  top: 30%;
-  left: 45%;
-}
-
-a.sf{
-  top: 50%;
-  left: 45%;
-}
-div.MA{
-  position: relative;
+div.weeb{
   background:#ff7e29;
-  transition: 0.5s;
+  width: 75%;
+  height: 100%;
 }
 
-div.MA:hover{
-  border-radius: 50px 0px 50px 100px;
-  transition: 2.5s;
-}
-
-div.MA a{
+div.weeb a{
   color: black;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 40%;
+  left: 40%;
   font-size: 250%;
   font-weight: bold;
 }
 
-a.anime{
-  top: 60%;
-  left: 45%;
+div.ctf{
+  background-color: black;
+  width: 75%;
+  height: 100%;
 }
 
-a.manga{
-  top: 40%;
-  left: 45%;
-}
-
-div.work{
-  background:#FEF3D7;
+div.ctf a{
+  color: #fff;
   position: relative;
-  transition: 0.5s;
+  top: 40%;
+  left: 40%;
+  font-size: 250%;
+  font-weight: bold;
 }
 
-div.work:hover{
-  border-radius: 0px 50px 100px 50px;
-  transition: 2.5s;
+div.hardware{
+  background-color: black;
+  width: 75%;
+  height: 100%;
 }
 
-p.timec{
-  position: absolute;
-  color: black;
-  transform: translate(-50%, -50%);
-  top: 50%;
+div.hardware a{
+  color: #fff;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  font-size: 250%;
+  font-weight: bold;
+}
+
+div.support{
+  background-color: black;
+  width: 75%;
+  height: 100%;
+}
+
+div.support a{
+  color: #fff;
+  position: relative;
+  top: 40%;
   left: 40%;
   font-size: 250%;
   font-weight: bold;

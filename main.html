@@ -3,29 +3,67 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href=style/topic.css>
 		<title>Hey on my site</title>
-		<script src=script/time.js></script>
 		<link rel="icon" href="img/vogel-icon.png">
 	</head>
 	<body>
-		<div class="topic">
-			<div class="my part">
-				<p>Me and my <a href="https://github.com/AndeAndreas31415">Github</a></p>
-				<div class="sup"><a href="relevant/support.html">Support</a></div>
+		<img src="img/fire_red-destroy.png" alt="fire_red-destroy" class="backimg">
+		<div class="card">
+			<div class="menu">
+				<input id="ab" class="tab" type="button" value="About">
+				<input id="wb" class="tab" type="button" value="Weeb">
+				<input id="mb" class="tab" type="button" value="Music">
+				<input id="cb" class="tab" type="button" value="CTF">
+				<input id="hb" class="tab" type="button" value="Hardware">
+				<input id="sb" class="tab" type="button" value="Support">
 			</div>
+			<div class="topic">
+				<div class="my part" id="ai">
+					<p>Me and my 
+						<a href="https://github.com/AndeAndreas31415">Github</a>
+					</p>
+					<!--<img src="https://avatars.githubusercontent.com/u/35007156?v=4" alt="github_avatar">-->
+				</div>
 
-			<div class="music part">
-				<a class="yt" href="https://www.youtube.com/playlist?list=PL4RUzjZMaUOWz5a1PEn0uYL1g_P02OPQN">Music</a>
-				<a class="sf" href="https://open.spotify.com/user/40el901peaz9gu4qpelss1t4a">Spotify</a>
-			</div>
+				<div class="weeb part" id="wi">
+					<a class="manga" href="weeb/manga.html">Manga</a>
+					<p></p>
+					<a class="anime" href="weeb/anime.html">Anime</a>
+				</div>
 
-			<div class="MA part">
-				<a class="manga" href="weeb/manga.html">Manga</a>
-				<a class="anime" href="weeb/anime.html">Anime</a>
-			</div>
+				<div class="music part" id="mi">
+					<a class="yt" href="https://www.youtube.com/playlist?list=PL4RUzjZMaUOWz5a1PEn0uYL1g_P02OPQN">Music</a>
+					<p></p>
+					<a class="sf" href="https://open.spotify.com/user/40el901peaz9gu4qpelss1t4a">Spotify</a>
+				</div>
 
-			<div class="work part">
-				<p id="timeid" class="timec">Unknow</p>
+				<div class="ctf part" id="ci">
+					<a href="ctf/inctf.html">ctf</a>
+				</div>
+
+				<div class="hardware part" id="hi">
+					<a href="hardware/hi.html">Hardware</a>
+				</div>
+
+				<div class="support part" id="si">
+					<d class="sup"><a href="relevant/support.html">Support</a></div>
+				</div>
 			</div>
 		</div>
+		<script>
+			function hidd() {
+				document.getElementById("ai").style.visibility = "hidden";
+				document.getElementById("wi").style.visibility = "hidden";
+				document.getElementById("mi").style.visibility = "hidden";
+				document.getElementById("ci").style.visibility = "hidden";
+				document.getElementById("hi").style.visibility = "hidden";
+				document.getElementById("si").style.visibility = "hidden";
+			}
+			document.getElementById("ab").onclick = function() {hidd();document.getElementById("ai").style.visibility = "visible"};
+			document.getElementById("wb").onclick = function() {hidd();document.getElementById("wi").style.visibility = "visible"};
+			document.getElementById("mb").onclick = function() {hidd();document.getElementById("mi").style.visibility = "visible"};
+			document.getElementById("cb").onclick = function() {hidd();document.getElementById("ci").style.visibility = "visible"};
+			document.getElementById("hb").onclick = function() {hidd();document.getElementById("hi").style.visibility = "visible"};
+			document.getElementById("sb").onclick = function() {hidd();document.getElementById("si").style.visibility = "visible"};
+		</script>
 	</body>
 </html>
