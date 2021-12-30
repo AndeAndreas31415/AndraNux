@@ -49,21 +49,14 @@
 				</div>
 			</div>
 		</div>
+		<script src="script/ffmain.js"></script>
 		<script>
-			function hidd() {
-				document.getElementById("ai").style.visibility = "hidden";
-				document.getElementById("wi").style.visibility = "hidden";
-				document.getElementById("mi").style.visibility = "hidden";
-				document.getElementById("ci").style.visibility = "hidden";
-				document.getElementById("hi").style.visibility = "hidden";
-				document.getElementById("si").style.visibility = "hidden";
-			}
-			document.getElementById("ab").onclick = function() {hidd();document.getElementById("ai").style.visibility = "visible"};
-			document.getElementById("wb").onclick = function() {hidd();document.getElementById("wi").style.visibility = "visible"};
-			document.getElementById("mb").onclick = function() {hidd();document.getElementById("mi").style.visibility = "visible"};
-			document.getElementById("cb").onclick = function() {hidd();document.getElementById("ci").style.visibility = "visible"};
-			document.getElementById("hb").onclick = function() {hidd();document.getElementById("hi").style.visibility = "visible"};
-			document.getElementById("sb").onclick = function() {hidd();document.getElementById("si").style.visibility = "visible"};
+			document.getElementById("ab").onclick = function() {hidd();document.getElementById("ai").style.visibility = "visible";activb("ab")};
+			document.getElementById("wb").onclick = function() {hidd();document.getElementById("wi").style.visibility = "visible";activb("wb")};
+			document.getElementById("mb").onclick = function() {hidd();document.getElementById("mi").style.visibility = "visible";activb("mb")};
+			document.getElementById("cb").onclick = function() {hidd();document.getElementById("ci").style.visibility = "visible";activb("cb")};
+			document.getElementById("hb").onclick = function() {hidd();document.getElementById("hi").style.visibility = "visible";activb("hb")};
+			document.getElementById("sb").onclick = function() {hidd();document.getElementById("si").style.visibility = "visible";activb("sb")};
 		</script>
 	</body>
 </html>
