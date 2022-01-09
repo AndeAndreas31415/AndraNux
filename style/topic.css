@@ -32,7 +32,7 @@ div.menu{
 
 input.tab{
   width: 100%;
-  height: calc(100%/6);
+  height: calc(100%/5);
   border-radius: 15px 0px 0px 15px;
   background-color: #00c0c0;
   border-style: solid;
@@ -80,6 +80,7 @@ div.my p{
   position: absolute;
   border-radius: 50%;
 }*/
+
 div.music{
   background:#20a4f3;
   width: 75%;
@@ -132,21 +133,6 @@ div.hardware{
 }
 
 div.hardware a{
-  color: #fff;
-  position: relative;
-  top: 40%;
-  left: 40%;
-  font-size: 250%;
-  font-weight: bold;
-}
-
-div.support{
-  background-color: black;
-  width: 75%;
-  height: 100%;
-}
-
-div.support a{
   color: #fff;
   position: relative;
   top: 40%;
