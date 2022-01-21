@@ -1,16 +1,22 @@
-function hidd() {
-	document.getElementById("ai").style.visibility = "hidden";
-	document.getElementById("wi").style.visibility = "hidden";
-	document.getElementById("mi").style.visibility = "hidden";
-    document.getElementById("ci").style.visibility = "hidden";
-	document.getElementById("hi").style.visibility = "hidden";
+function hidd(a,s) {
+	minimize(a,"0")
+    document.getElementById(s).style.opacity = "1";
 }
 
-function activb(s) {
-	document.getElementById("ab").style.opacity = "1";
-	document.getElementById("wb").style.opacity = "1";
-	document.getElementById("mb").style.opacity = "1";
-    document.getElementById("cb").style.opacity = "1";
-	document.getElementById("hb").style.opacity = "1";
+function activb(a,s) {
+	minimize(a,"1")
     document.getElementById(s).style.opacity = "0";
+}
+
+function minimize(a,io) {
+	for (let i = 0; i < a.length; i++) {
+		document.getElementById(a[i]).style.opacity = io;
+	}
+}
+
+function heighf0 (a,s) {
+	for (let i = 0; i < a.length; i++) {
+		document.getElementById(a[i]).style.height = "0%";
+	}
+	document.getElementById(s).style.height = "95%";
 }

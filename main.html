@@ -48,11 +48,11 @@
 		</div>
 		<script src="script/ffmain.js"></script>
 		<script>
-			document.getElementById("ab").onclick = function() {hidd();document.getElementById("ai").style.visibility = "visible";activb("ab")};
-			document.getElementById("wb").onclick = function() {hidd();document.getElementById("wi").style.visibility = "visible";activb("wb")};
-			document.getElementById("mb").onclick = function() {hidd();document.getElementById("mi").style.visibility = "visible";activb("mb")};
-			document.getElementById("cb").onclick = function() {hidd();document.getElementById("ci").style.visibility = "visible";activb("cb")};
-			document.getElementById("hb").onclick = function() {hidd();document.getElementById("hi").style.visibility = "visible";activb("hb")};
+			a=["ab","wb","mb","cb","hb"]
+			i=["ai","wi","mi","ci","hi"]
+			for (let ia = 0; ia < a.length; ia++) {
+				document.getElementById(a[ia]).onclick = function() {hidd(i,i[ia]);activb(a,a[ia])};
+			}
 			document.getElementById('ab').click();
 		</script>
 	</body>
