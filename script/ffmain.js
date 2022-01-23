@@ -18,5 +18,5 @@ function heighf0 (a,s) {
 	for (let i = 0; i < a.length; i++) {
 		document.getElementById(a[i]).style.height = "0%";
 	}
-	document.getElementById(s).style.height = "95%";
+	document.getElementById(s).style.height = "100%";
 }
