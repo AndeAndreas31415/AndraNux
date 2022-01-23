@@ -59,10 +59,10 @@ input:checked + .slider:before {
 img.cursor_img {
   z-index: 1;
   position: absolute;
-  top: 39%;
-  left: 92%;
+  top: 36%;
+  left: 95%;
   transform: translate(-50%, -50%) rotate(280deg);
-  width: 15%;
+  width: 25%;
   transition: 0.5s;
 }
 
@@ -98,6 +98,7 @@ div.Dh {
 p.Hello {
   font-size: 500%;
   font-weight: bold;
+  font-style: italic;
   transition: 2s;
 }
 
