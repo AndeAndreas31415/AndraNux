@@ -6,12 +6,20 @@ div.cpasswdiv{
     z-index: 1;
     visibility: hidden;
     background-color: #001919e8;
+
     border-radius: 15px;
     border-color: #e1d8ff99;
     border-width: 5px;
     border-style: solid;
-    height: 350px;
-    width: 1000px;
+
+    min-height: 350px;
+    height:80%;
+    max-height: 450px;
+    
+    min-width: 200px;
+    width: 50%;
+    max-width: 1000px;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -63,8 +71,15 @@ div.pagesc{
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    height: 600px;
-    width: 1650px;
+
+    min-height: 350px;
+    height:80%;
+    max-height: 550px;
+    
+    min-width: 200px;
+    width: 85%;
+    max-width: 1500px;
+
     border-color: #000;
     border-style: solid;
     border-radius: 5px;
@@ -84,11 +99,11 @@ img.bimg{
 
 div.taskl{
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 560px;
-    left: 825px;
+    transform: translate(-50%, 100%);
+    left: 50%;
+    bottom: 70px;
     height: 70px;
-    width: 420px;
+    width: 50%;
     background-color: #ffffff3f;
     border-radius: 15px;
 }
@@ -98,15 +113,15 @@ div.taskl{
     background: transparent;
     border-style: none;
     border-radius: 15px;
-    margin-top: 5px;
-    margin-left: 5px;
+    top: 5px;
+    left: 5px;
     /*! box-shadow: 0px 0px 10px 1px #f00; */
 }
 
 .sourcebg{
     position: absolute;
-    margin-top: 5px;
-    margin-left: 355px;
+    top: 5px;
+    right: 5px;
     border-style: none;
     border-radius: 15px;
     text-decoration: none;
@@ -114,17 +129,16 @@ div.taskl{
 }
 
 .clockc{
+    transform: translate(-50%, 0%);
     position: absolute;
     background-color: #000000a0;
     color: #fff;
     height: 55px;
     width: 130px;
-    margin-top: 5px;
-    margin-left: 145px;
+    top: 5px;
+    left: 50%;
     border-radius: 15px;
-    /*! box-shadow: 0px 0px 10px 1px #000; */
-    padding-top: 5px;
-    padding-left: 5px;
+    text-align: center;
     font-size: 50px;
     font-family: 'liquid_crystalregular', sans-serif;
     text-shadow: 0px 0px 2px #0f0;
