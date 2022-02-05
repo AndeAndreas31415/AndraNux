@@ -3,6 +3,10 @@ html,body{
   margin: 0;
 }
 
+body,input,a{
+  cursor: url(../img/cursor.ico), default;
+}
+
 img.backimg{
   z-index: -1;
   width: 100%;
