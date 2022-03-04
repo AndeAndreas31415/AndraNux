@@ -2,7 +2,6 @@
 	<meta charset="UTF-8">
 	<title>Nindento DSi repair</title>
 	<link rel="stylesheet" href="../../style/hardware.css">
-	<script src="../../script/ffmain.js"></script>
 </head>
 <body>
 	<details open>
@@ -10,62 +9,51 @@
 		<p>Hey. Ich war auf ebay unterwegs und habe ein Teildefekte Nindendo DSi gekauft.<br>
 		Bestandsaufnahme: Touch vom Touchscreen defekt, linke Schultertaste defekt.<br>
 		Aufgeschraubt und angeschaut.</p>
-		<input id="i0" class="sourcebg" type="image" src="img-0.jpg" style="width: 25%;" alt="img-0">
-		<input id="i2" class="sourcebg" type="image" src="img-2.jpg" style="width: 25%;" alt="img-2">
+		<input id="i0" class="sourcebg" type="image" src="img-0.jpg" alt="img-0">
+		<input id="i1" class="sourcebg" type="image" src="img-1.jpg" alt="img-2">
 		<p>Der Steckverbinder (ZIF) für das Touchscreen Flachbandkable war kaputt.<br>
 		Es hatt ein Verschlussbügel gefehlt um das Flachbandkabel zu fixieren.<br>
 		Ich habe ein stück Klebeband auf die Rückseite des Flachbandkabels geklebt.<br>
 		Und habe das Flachbandkable mit dem Klebeband in die Buchse reingesteckt.<br>
 		Das Touchscreen hatt wieder funktioniert.</p>
-		<input id="i1" class="sourcebg" type="image" src="img-1.jpg" style="width: 25%;" alt="img-1">
+		<input id="i2" class="sourcebg" type="image" src="img-2.jpg" alt="img-1">
 		<p>Es war die linke Schultertaste noch defekt.<br>
 		Ich habe online nach Ersatzteile gesucht und habe nichts passendes gefunden.<br>
 		Deswegen habe ich mich dazu entschlossen das ich den Taster auseinandernehmen und den reinige.</p>
-		<input id="i3" class="sourcebg" type="image" src="img-3.jpg" style="width: 25%;" alt="img-3">
-		<input id="i4" class="sourcebg" type="image" src="img-4.jpg" style="width: 25%;" alt="img-4">
-		<input id="i5" class="sourcebg" type="image" src="img-5.jpg" style="width: 25%;" alt="img-5">
+		<input id="i3" class="sourcebg" type="image" src="img-3.jpg" alt="img-3">
+		<input id="i4" class="sourcebg" type="image" src="img-4.jpg" alt="img-4">
+		<input id="i5" class="sourcebg" type="image" src="img-5.jpg" alt="img-5">
 		<p>Nach der Reinigung musste ich den Metallschild vom Taster wieder festlöten.<br>
 		Zum schlusswar die linke Schultertaste wieder funktionsfähig.</p>
 	</details>
-
 	<details>
 		<summary>English</summary>
 		<p>Hey. I was on ebay and bought a partial defect Nindendo DSi.<br>
 		Inventory: Touch defect, left shoulder button defect.<br>
 		Screwed on and looked at.</p>
-		<input id="i0" class="sourcebg" type="image" src="img-0.jpg" style="width: 25%;" alt="img-0">
-		<input id="i2" class="sourcebg" type="image" src="img-2.jpg" style="width: 25%;" alt="img-2">
+		<input id="i6" class="sourcebg" type="image" src="img-0.jpg" alt="img-0">
+		<input id="i7" class="sourcebg" type="image" src="img-1.jpg" alt="img-2">
 		<p>The connector (ZIF) for the touchscreen ribboncable was defect.<br>
 		A locking bracket was missing to fix the cable.<br>
 		I glued a piece of tape to the back of the ribboncable.<br>
 		And I plugged the ribboncable into the socket with the adhesive tape.<br>
 		The touch screen worked again.</p>
-		<input id="i1" class="sourcebg" type="image" src="img-1.jpg" style="width: 25%;" alt="img-1">
+		<input id="i8" class="sourcebg" type="image" src="img-2.jpg" alt="img-1">
 		<p>The left shoulder button was still defect.<br>
 		I searched online for spare parts and didn't find anything suitable.<br>
 		That's why I decided to take the button in aparts and clean it.</p>
-		<input id="i3" class="sourcebg" type="image" src="img-3.jpg" style="width: 25%;" alt="img-3">
-		<input id="i4" class="sourcebg" type="image" src="img-4.jpg" style="width: 25%;" alt="img-4">
-		<input id="i5" class="sourcebg" type="image" src="img-5.jpg" style="width: 25%;" alt="img-5">
+		<input id="i9" class="sourcebg" type="image" src="img-3.jpg" alt="img-3">
+		<input id="i10" class="sourcebg" type="image" src="img-4.jpg" alt="img-4">
+		<input id="i11" class="sourcebg" type="image" src="img-5.jpg" alt="img-5">
 		<p>After cleaning, I had to re-solder the metal plate from the button.<br>
 		Finally, the left shoulder button was functional again.</p> 
 	</details>
-	<div>
-		<input id="io0" type="image" src="img-0.jpg" alt="img-0" class="dis">
-		<input id="io1" type="image" src="img-1.jpg" alt="img-1" class="dis">
-		<input id="io2" type="image" src="img-2.jpg" alt="img-2" class="dis">
-		<input id="io3" type="image" src="img-3.jpg" alt="img-3" class="dis">
-		<input id="io4" type="image" src="img-4.jpg" alt="img-4" class="dis">
-		<input id="io5" type="image" src="img-5.jpg" alt="img-5" class="dis">
-	</div>
 	<script>
-		a=["io0","io1","io2","io3","io4","io5"]
-		i=["i0","i1","i2","i3","i4","i5"]
-		for (let ia = 0; ia < i.length; ia++) {
-			document.getElementById(i[ia]).onclick = function() {hidd(a,a[ia]);heighf0(a,a[ia]);document.getElementById(a[ia]).style.height = "95%"};
-		}
-		for (let ia = 0; ia < a.length; ia++) {
-			document.getElementById(a[ia]).onclick = function() {minimize(a,"0");document.getElementById(a[ia]).style.height = "0%"};
+		var sima = document.querySelectorAll(".sourcebg");
+		for (let sita = 0; sita < sima.length; sita++) {
+			document.getElementById(sima[sita].id).onclick = function() {
+				document.location = "img-"+sita % (sima.length/2)+".jpg";
+			};
 		}
 	</script>
 </body>
