@@ -33,6 +33,7 @@ div.card{
 div.card:hover{
   margin-top:-5px;
   box-shadow:0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 div.card-header{
