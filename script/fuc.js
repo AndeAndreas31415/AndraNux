@@ -7,8 +7,8 @@ function brain(){
 		document.getElementById("check").checked = false;
 	}
 	setTimeout(function(){
-		document.location = "main.html";
-	},1000);
+		document.location = "nothing.html";
+	},500);
 }
 
 function myswitch(){

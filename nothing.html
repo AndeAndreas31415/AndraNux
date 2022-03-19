@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style/transition.css">
+    </head>
+    <body style="cursor: none;">
+        <div class="back">
+            <p class="n">nothing</p>
+            <div class="box">
+                <div class="rain"></div>
+                <div class="black"></div>
+            </div>
+        </div>
+        <script> 
+            var counter = 10;
+            var id = setInterval(function() {
+            counter--;
+            if(counter > 0) {
+                    var msg = 'You can downnload the file in ' + counter + ' seconds';
+                    console.log(msg);
+                } else {
+                    window.location.replace("main.html");
+                }
+            }, 1000);
+        </script>
+    </body>
+</html>
