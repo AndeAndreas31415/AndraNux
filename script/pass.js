@@ -69,7 +69,7 @@ function login(e) {
             ];
         
         console.log((l[0]+"ab"+s[1]+s[2]+"cd"+l[2]+"ef-"+s[5]+l[3]));
-        aC("ctf",(l[0]+"ab"+s[1]+s[2]+"cd"+l[2]+"ef-"+s[5]+l[3]));
+        aC("ctf",(l[0]+"ab"+s[1]+s[2]+"cd"+l[2]+"ef-"+s[5]+l[3]),30);
         window.location.reload(true);
     }
 }
@@ -84,21 +84,20 @@ function brutfuc(cookie) {
                 return;
             } else {
                 var bfac=parseInt(ca[1])+1;
-                aC("brutfa",bfac);
+                aC("brutfa",bfac,(1/72));
                 return;
             }
         } else {
             console.log("Fuck");
-            aC("brutfa","1");
+            aC("brutfa","1",(1/72));
             return;
         }
     }
 }
 
-function aC(nc,scoo) {
+function aC(nc,scoo,ld) {
     var d = new Date();
-    var lifedays = 30;
-    d.setTime(d.getTime() + (lifedays*24*60*60*1000));
+    d.setTime(d.getTime() + (ld*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = nc+"="+scoo+"; "+expires+"; secure";
 }
