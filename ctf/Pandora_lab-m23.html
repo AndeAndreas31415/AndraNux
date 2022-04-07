@@ -9,7 +9,17 @@
 </head>
 <body>
     <a href="https://www.goos-habermann.de/index.php?s=Pandora">Link to challenge</a>
-    <p> #define CODE_UNLOCK1 "aiT2b"<br>
+    <p> For all the people who use qemu:<br>
+        <ol>tar -xfv pandora.ova<br>
+        <br>
+        qemu-img convert -O qcow2 pandora-2020-04-08-systemd-OVA-2.0-disk001.vmdk pandora-1.qcow2<br>
+        qemu-img convert -O qcow2 pandora-2020-04-08-systemd-OVA-2.0-disk002.vmdk pandora-2.qcow2<br>
+        <br>
+        mv pandora-1.qcow2 pandora-sphinx.qcow2<br>
+        mv pandora-2.qcow2 pandora-admin.qcow2<br></ol>
+        <br>
+        Unlock_codes are located in the file /root/sphinx/sphinx.cpp on the sphinx VM.<br>
+    	<ol>#define CODE_UNLOCK1 "aiT2b"<br>
         #define CODE_UNLOCK2 "14236"<br>
         #define CODE_UNLOCK3 "1.1.1.1"<br>
         #define CODE_UNLOCK4 "Eev6eiSh"<br>
@@ -18,6 +28,6 @@
         #define CODE_UNLOCK7 "Bai1a"<br>
         #define CODE_UNLOCK8 "1.6.6.6"<br>
         #define CODE_UNLOCK9 "43571"<br>
-        #define CODE_UNLOCK10 "*****"</p>
+        #define CODE_UNLOCK10 "*****"</ol></p>
 </body>
 </html>
