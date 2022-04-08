@@ -1,0 +1,140 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Software Project Index</title>
+</head>
+<body>
+	<p>My way to install mygpo (Webserver for gpodder)<br>
+        Importent!: This is a Test installation and no ports open to the internet. The open ports are only local open.<br>
+        System:
+    </p>
+    <ol>- Debian 11<br>
+        - Virtual with qemu/virt-manager<br>
+        - 2 core CPU<br>
+        - 1 GB RAM<br>
+        - runtime: 15min every ca.1 week<br>
+        - home_network (Local_network)<br>
+        - Install April 2022<br><br>
+    </ol>
+    <p>Topics:</p>
+    <ol><a href="#Gpodder">- Gpodder</a><br>
+        <a href="#Sslstuff">- SSL certificate</a><br>
+        <a href="#Nginx">- Nginx config</a><br>
+        <a href="#Script">- Start script</a><br>
+        <a href="#Service">- Linux Service</a><br>
+    </ol><br>
+    <div style="background-color: #0000ff45;">
+        <p><a name="Gpodder">Gpodder:</a><br><a href="https://gpoddernet.readthedocs.io/en/latest/dev/installation.html">Gpodder Documentation</a></p>
+        <code><ol>git clone https://github.com/gpodder/mygpo.git /opt/gpodder/mygpo<br>
+            cd /opt/gpodder/mygpo<br>
+            make install-deps<br>
+            <br>
+            virtualenv venv<br>
+            source venv/bin/activate<br>
+            pip install -r requirements.txt<br>
+            pip install -r requirements-dev.txt<br>
+            pip install -r requirements-setup.txt<br>
+            pip install -r requirements-test.txt<br>
+            <br>
+            mkdir -p envs/dev<br>
+            echo django.core.mail.backends.console.EmailBackend > envs/dev/EMAIL_BACKEND<br>
+            echo secret > envs/dev/SECRET_KEY<br>
+            echo postgres://mygpo:mygpo@localhost/mygpo > envs/dev/DATABASE_URL<br>
+            echo True > envs/dev/DEBUG<br>
+            echo "127.0.0.1" > envs/dev/INTERNAL_IPS<br>
+            mkdir -p /tmp/mygpo-test-media<br>
+            echo /tmp/mygpo-test-media > envs/dev/MEDIA_ROOT<br>
+            make dev-config<br>
+            <br>
+            su postgres<br>
+            psql<br>
+            <ol>
+                CREATE USER mygpo WITH PASSWORD 'mygpo';<br>
+                ALTER USER mygpo CREATEDB;<br>
+                CREATE DATABASE mygpo;<br>
+                CREATE DATABASE test_mygpo;<br>
+                GRANT ALL PRIVILEGES ON DATABASE mygpo to mygpo;<br>
+                GRANT ALL PRIVILEGES ON DATABASE test_mygpo to mygpo;<br>
+                ALTER DATABASE mygpo OWNER TO mygpo;<br>
+                ALTER DATABASE test_mygpo OWNER TO mygpo;<br>
+                ALTER ROLE mygpo SET statement_timeout = 5000;<br>
+                exit;
+            </ol>
+            <br>
+            envdir envs/dev python manage.py migrate<br>
+            deactivate<br>
+        </ol><br>
+    </code></div>
+    <div style="background-color: #00ffff45;">
+        <p><a name="Sslstuff">SSL certificate stuff:</a></p>
+        <code><ol>
+            mkdir /opt/gpodder/ssl_stuff/<br>
+            <br>
+            openssl req -x509 -out /opt/gpodder/ssl_stuff/localhost.crt -keyout /opt/gpodder/ssl_stuff/localhost.key   -newkey rsa:2048 -nodes -sha256   -subj '/CN=localhost' -extensions EXT -config <(printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
+            </ol>
+    </code></div>
+    <div style="background-color: #00ff0045;">
+        <p><a name="Nginx">Nginx config:</a></p>
+        <code><ol>create + edit /opt/gpodder/nginx.conf<br><br>
+                <ol>events {<br>
+                    <ol>worker_connections 768;<br>
+                    # multi_accept on;</ol>
+                }
+                <br>
+                http{<br>
+                    <ol>server {<br>
+                    <ol>listen 443 ssl;<br>
+                        ssl on;<br>
+                        ssl_certificate /opt/gpodder/ssl_stuff/localhost.crt;<br>
+                        ssl_certificate_key /opt/gpodder/ssl_stuff/localhost.key;<br>
+                        ssl_session_cache shared:SSL:1m;<br>
+                        ssl_session_timeout 5m;<br>
+                        ssl_protocols TLSV1.1 TLSV1.2 TLSV1.3;<br>
+                        <br>
+                        ssl_ciphers  HIGH:!aNULL:!MD5;<br>
+                        ssl_prefer_server_ciphers  on;<br>
+                        <br>
+                        location / {<br>
+                            <ol>proxy_pass http://127.0.0.1:8000;</ol>
+                        }</ol>
+                    }</ol>
+                }</ol>
+            </ol><br>
+    </code></div>
+    <div style="background-color: #ffff0045;">
+        <p><a name="Script">Run script:</a></p>
+        <code><ol>create + edit /opt/gpodder/run.sh<br><br>
+                <ol>#!/bin/bash<br>
+                    <br>
+                    kill $( ps $@ -u $USER -o pid,command | grep nginx | grep -v "grep"|awk '{print $1}')<br>
+                    nginx -c /opt/gpodder/nginx.conf<br>
+                    cd /opt/gpodder/mygpo<br>
+                    source venv/bin/activate<br>
+                    envdir envs/dev python manage.py runserver<br><br>
+                    </ol>
+                chmod +x /opt/gpodder/run.sh<br>
+            </ol><br>
+    </code></div>
+    <div style="background-color: #ff000045;">
+        <p><a name="Service">Service for autostart:</a></p>
+        <code><ol>create + edit /usr/lib/systemd/system/gpodder.service<br><br>
+                <ol>
+                    [Unit]<br>
+                    Description=gpodder service<br>
+                    After=mysqld.service<br>
+                    After=network.target<br>
+                    <br>
+                    [Service]<br>
+                    ExecStart=/opt/gpodder/run.sh<br>
+                    ExecReload=/bin/kill -HUP $MAINPID<br>
+                    ExecStop=/bin/kill -HUB $MAINPID<br>
+                    KillMode=process<br>
+                    Restart=always<br>
+                    <br>
+                    [Install]<br>
+                    WantedBy=multi-user.target<br><br>
+                </ol>
+                systemctl daemon-reload<br>
+                systemctl enable gpodder --now<br>
+            </ol><br>
+    </code></div>
+</body>
