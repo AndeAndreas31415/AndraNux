@@ -1,10 +1,10 @@
 function hidd(a,s) {
 	minimize(a,"0")
-    document.getElementById(s).style.opacity = "1";
+    document.getElementById(s).style.opacity = "0.85";
 }
 
 function activb(a,s) {
-	minimize(a,"1")
+	minimize(a,"0.9")
     document.getElementById(s).style.opacity = "0";
 }
 
