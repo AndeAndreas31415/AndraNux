@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../style/ctf.css">
+    <script src="../../../../script/pass.js"></script>
+    <link rel="icon" href="../../../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <a href="https://www.patreon.com/posts/ctf-challenge-64979396">Link</a>
+    <p>code writen in python</p>
+    <div class="codeback">
+        <code>
+            from PIL import Image, ImageColor<br>
+            <br>
+            with open('code.txt') as my_file:<br>
+                    <ol>linearray = [line.strip() for line in my_file]</ol>
+            <br>
+            to_arr = [[char for char in llin]for llin in linearray]<br>
+            <br>
+            img = Image.new(mode = "RGB", size = (to_arr.__len__(),to_arr.__len__()))<br>
+            row=0<br>
+            line=0<br>
+            <br>
+            pixel_array=""<br>
+            <br>
+            for kl in to_arr:<br>
+                <ol>for ki in kl:<br>
+                    <ol>if ki == '1':<br>
+                        <ol>pixel_array += str("1")<br>
+                        img.putpixel((row,line), ImageColor.getcolor('black', '1'))</ol>
+                    elif ki == '0':<br>
+                        <ol>pixel_array += str("0")<br>
+                        img.putpixel((row,line), ImageColor.getcolor('white', '1'))</ol>
+                    else:<br>
+                        <ol>print(ki)</ol>
+                    row=row+1</ol>
+                line=line+1<br>
+                row=0</ol>
+            img.save("qrcode .png")
+        </code>
+    </div>
+    <p>Answer: FLO{QR rocks!}</p>
+</body>
