@@ -10,14 +10,22 @@ div.mangas,div.Anime{
 }
 
 div.manga,div.serie {
-  width: 200px;
-  height: 190px;
+  width: 190px;
   border-color: lightblue;
   border-width: 2.5px;
   border-style: dashed;
   border-radius: 25px;
   display: inline-block;
   margin: 2.5px;
+  padding: 5px;
+}
+
+div.manga{
+  height: 195px;
+}
+
+div.serie{
+  height: 260px;
 }
 
 div.manga,div.serie:not(div.fin):not(div.run):not(div.list){
