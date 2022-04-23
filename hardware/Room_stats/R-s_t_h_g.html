@@ -1,0 +1,53 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Room sensor diy</title>
+	<link rel="stylesheet" href="../../style/hardware.css">
+	<script src="../../script/ffmain.js"></script>
+</head>
+<body>
+	<details open>
+		<summary>German</summary>
+		<p>Das ist aktuell nur ein Prototyp.<br>
+			Ich wollte einfach mal von meinem Rechner aus wiesen wie warm es in mein Raum ist.<br>
+			Das war die Grundidee.<br>
+			Ich habe mich für ein "NodeMCU V3(LOL1n)" entschieden, probehalber.</p>
+		<input id="i0" class="sourcebg" type="image" src="img-0.jpg" alt="img-0">
+		<input id="i1" class="sourcebg" type="image" src="img-1.jpg" alt="img-1">
+		<p>Desweiteren habe ich mich für ein "DHT 22" und ein "MQ135" sensor entschieden.<br>
+			Der "DHT 22" Sensor ist für Temperatur und Luftfeuchtigkeit zuständig und der "MQ135" für verschmutzte luft.<br>
+			Aus dem Schaltbild kann man die verdrahtung entnehmen.</p>
+		<input id="i2" class="sourcebg" type="image" src="img-2.jpg" alt="img-2">
+		<p>In den nächsten 2 Bilder kann man es zusammengebaut auf ein Breadbord anschauen.</p>
+		<input id="i3" class="sourcebg" type="image" src="img-3.jpg" alt="img-3">
+		<input id="i4" class="sourcebg" type="image" src="img-4.jpg" alt="img-4">
+		<p>Hier noch der <a href="NodeMCU-air_temp.txt">source code: Link</a><br>
+			Über cURL holle ich mir die Daten.</p>
+	</details>
+	<details>
+		<summary>English</summary>
+		<p>This is currently just a prototype.<br>
+			I just wanted to show from my computer how warm it is in my room.<br>
+			That was the basic idea.<br>
+			I decided to try a "NodeMCU V3(LOL1n)".</p>
+		<input id="i5" class="sourcebg" type="image" src="img-0.jpg" alt="img-0">
+		<input id="i6" class="sourcebg" type="image" src="img-1.jpg" alt="img-1">
+		<p>I also decided on a "DHT 22" and an "MQ135" sensor.<br>
+			The "DHT 22" sensor is responsible for temperature and humidity and the "MQ135" for polluted air.<br>
+			The wiring can be seen in the circuit diagram.</p>
+		<input id="i7" class="sourcebg" type="image" src="img-2.jpg" alt="img-2">
+		<p>In the next 2 pictures you can see it assembled on a breadboard.</p>
+		<input id="i8" class="sourcebg" type="image" src="img-3.jpg" alt="img-3">
+		<input id="i9" class="sourcebg" type="image" src="img-4.jpg" alt="img-4">
+		<p>Here is the <a href="NodeMCU-air_temp.txt">source code: Link</a><br>
+			I get the data via cURL.</p>
+	</details>
+
+	<script>
+		var sima = document.querySelectorAll(".sourcebg");
+		for (let sita = 0; sita < sima.length; sita++) {
+			document.getElementById(sima[sita].id).onclick = function() {
+				document.location = "img-"+sita % (sima.length/2)+".jpg";
+			};
+		}
+	</script>
+</body>
