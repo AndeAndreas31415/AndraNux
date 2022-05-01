@@ -145,7 +145,7 @@ div.weeb{
   left: 50%;
   clip-path: polygon(0 0,0 100%, 100% 0);
   border-radius: 0px 20px 20px 0px;
-  background: url(../img/animebg.png);
+  background: url(../img/animebg.jpg);
   background-size:cover;
   filter: blur(2px);
   transition: box-shadow 250ms linear, filter 5s linear;
@@ -167,7 +167,7 @@ div.weeb{
   left: 50%;
   clip-path: polygon(100% 100%,0 100%, 100% 0);
   border-radius: 0px 20px 20px 0px;
-  background: url(../img/mangabg.png);
+  background: url(../img/mangabg.jpg);
   background-size:cover;
   filter: blur(2px);
   transition: box-shadow 250ms linear, filter 5s linear;
