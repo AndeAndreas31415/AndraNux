@@ -97,8 +97,8 @@ div.in{
 }
 
 
-div.weeb a,div.music a,div.ctf a,div.hardware a{
-  font-size: 250%;
+div.music a,div.ctf a,div.hardware a{
+  font-size: 400%;
   font-weight: bold;
   color: white;
 }
@@ -107,6 +107,85 @@ div.weeb{
   background:black;
   width: 75%;
   height: 100%;
+}
+
+.anime{
+  position: absolute;
+  top:15%;
+  left:15%;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  text-decoration: none;
+  font-size: 400%;
+  font-weight: bold;
+  color: white;
+}
+
+.manga{
+  position: absolute;
+  bottom:15%;
+  right:15%;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+  text-decoration: none;
+  font-size: 500%;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  background-clip: text;
+}
+
+.animed{
+  box-shadow: 0px 0px 20px 15px #ffffffa0 inset;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  clip-path: polygon(0 0,0 100%, 100% 0);
+  border-radius: 0px 20px 20px 0px;
+  background: url(../img/animebg.png);
+  background-size:cover;
+  filter: blur(2px);
+  transition: box-shadow 250ms linear, filter 5s linear;
+}
+
+.animed:hover{
+  box-shadow: 0px 0px 20px 15px #000000a0 inset;
+  filter: blur(0px);
+  transition: box-shadow 250ms linear, filter 500ms linear;
+}
+
+.mangad{
+  box-shadow: 0px 0px 20px 15px #000000a0 inset;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  clip-path: polygon(100% 100%,0 100%, 100% 0);
+  border-radius: 0px 20px 20px 0px;
+  background: url(../img/mangabg.png);
+  background-size:cover;
+  filter: blur(2px);
+  transition: box-shadow 250ms linear, filter 5s linear;
+}
+
+.mangad:hover{
+  box-shadow: 0px 0px 20px 15px #ffffffa0 inset;
+  filter: blur(0px);
+  transition: box-shadow 250ms linear, filter 500ms linear;
+}
+
+.divide{
+  background-color: #8f8d8f;
+  margin-top: 1px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 20px 20px 0px;
+  clip-path: polygon(99% 0,100% 0, 100% 1%, 1% 100%,0 100%, 0 99%);
 }
 
 div.music{
