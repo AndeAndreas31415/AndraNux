@@ -1,15 +1,16 @@
 /* manga */
 body.mh,body.ah{
-  background-color: #101414;
+  background-color: #12130e;
 }
 div.mangas,div.Anime{
   padding: 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: wrap;
 }
 
 div.manga,div.serie {
+  background: #00b7ff05;
   width: 190px;
   border-color: lightblue;
   border-width: 2.5px;
