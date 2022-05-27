@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/ctf.css">
+    <script src="../../script/pass.js"></script>
+    <link rel="icon" href="../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <a href="https://ctflearn.com/challenge/1135" target="_blank">Link</a>
+    <p>unzip MyFriendJohn.zip<br><br>
+
+        zip2john use-rockyou.zip >hash.txt<br>
+        john --format=PKZIP --wordlist=/usr/share/wordlists/passwords/rockyou.txt hash.txt<br>
+        unzip use-rockyou.zip with pw:kdbs0429<br><br>
+
+        zip2john custom-list.zip >hash.txt <br>
+        john --format=PKZIP --wordlist=custom-list.txt hash.txt<br>
+        unzip custom-list.zip with pw:1N73rD3N0M1N4710N41<br><br>
+
+        zip2john brute-force-pin.zip >hash.txt<br>
+        john --format=PKZIP --wordlist=/usr/share/wordlists/passwords/rockyou.txt hash.txt<br>
+        unzip brute-force-pin.zip with pw:991337<br><br>
+        
+        cat flag.txt
+    </p>
+    <i>CTFlearn{s0_n0W_y0uv3_M3t_J0hN}</i>
+</body>

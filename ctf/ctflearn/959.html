@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/ctf.css">
+    <script src="../../script/pass.js"></script>
+    <link rel="icon" href="../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <a href="https://ctflearn.com/challenge/959" target="_blank">Link</a>
+    <p>writen in python</p>
+    <div class="codeback">
+        <code>
+            file = open("TheMessage.txt", "r").read()<br>
+            result = ""<br>
+            for char in file:<br>
+            <ol>if ord(char) == 32:<br>
+                    <ol>result += "0"<br></ol>
+                else:<br>
+                <ol>result += "1"<br></ol></ol>
+            print(result)<br>
+            <br>
+            print(''.join(chr(int(result[i*8:i*8+8],2)) for i in range(len(result)//8)))<br>
+            
+        </code>
+    </div>
+    <i>CTFlearn{If_y0u_r3/\d_thi5_you_pa553d}</i>
+</body>
