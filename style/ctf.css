@@ -4,7 +4,6 @@
 div.cpasswdiv{
     position: absolute;
     z-index: 1;
-    visibility: hidden;
     background-color: #001919e8;
 
     border-radius: 15px;
@@ -66,7 +65,6 @@ p.passlock{
 /* index-page */
 
 div.pagesc{
-    visibility: hidden;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;

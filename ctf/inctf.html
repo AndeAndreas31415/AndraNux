@@ -8,13 +8,6 @@
     <title>CTF-Index</title>
 </head>
 <body>
-    <div class="backpd">
-        <div class="cpasswdiv" id="ipasswdiv">
-            <p class="passlock">&#128274</p>
-            <p class="passtxt">I need a string to unlock the answer of the way to <br> the NEXT LIFE.</p>
-            <input type="password" placeholder="look Console" id="passw" class="passw">
-        </div>
-    </div>
     <div id="pages" class="pagesc">
         <img src="tech-quadrat.jpg" alt="tech" class="bimg">
         <div>
@@ -36,7 +29,7 @@
     </div>
     <script src="../script/pass.js"></script>
     <script> 
-        document.getElementById("rcb").onclick = function() {removeCookie("ctf");window.location.reload(true);};
+        document.getElementById("rcb").onclick = function() {removeCookie("ctf");removeCookie("site");window.location.reload(true);};
         document.getElementById("inf").onclick = function() {window.location.href="https://pixabay.com/de/illustrations/technik-kreis-technologie-abstrakt-3041437/"};
         function addZero(i) {
             if (i < 10) {i = "0" + i}
