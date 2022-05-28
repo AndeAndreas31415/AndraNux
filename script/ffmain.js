@@ -20,3 +20,10 @@ function heighf0 (a,s) {
 	}
 	document.getElementById(s).style.height = "100%";
 }
+
+function vis(a,s) {
+	for (let i = 0; i < a.length; i++) {
+		document.getElementById(a[i]).style.visibility = "hidden";
+	}
+	document.getElementById(s).style.visibility = "visible";
+}
