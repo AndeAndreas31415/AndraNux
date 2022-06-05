@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/ctf.css">
+    <script src="../../script/pass.js"></script>
+    <link rel="icon" href="../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <a href="https://capturetheflag.withgoogle.com/beginners-quest" target="_blank">https://capturetheflag.withgoogle.com/beginners-quest</a>
+    <details>
+        <summary>challenge 1.</summary>
+        <p>
+            In the "Login" Page is javascript.<br>
+            In this js-code are finding "checkPassword" function.<br>
+            If you press the "login" button than start this function.<br>
+            This function grap the value from the input#password and write down in a variable.<br>
+            The next step is added on each char from the variable the value 0xCafe = 51966.<br>
+            After this calculation is a if statement.<br>
+            The if statement is checking for each char after calculation if this value equal to a special value.<br>
+            To crack the password you must to subtraction the special value and 0xCafe,<br> 
+            52037-51966=71	G<br>
+            52077-51966=111	o<br>
+            52077-51966=111	o<br>
+            52066-51966=100 d<br>
+            52046-51966=80	P<br>
+            52063-51966=97	a<br>
+            52081-51966=115	s<br>
+            52081-51966=115	s<br>
+            52085-51966=119	w<br>
+            52077-51966=111	o<br>
+            52080-51966=114	r<br>
+            52066-51966=100	d<br>
+            After the calculation is every number a alphabet char.<br>
+            The password is: GoodPassword<br>
+            After login is the flag in the left down edge.<br>
+            answer1: CTF{IJustHopeThisIsNotOnShodan}
+        </p>
+    </details>
+    <details>
+        <summary>challenge 2.</summary>
+        <p>
+            Download a file.<br>
+            The file signature ask this file is a Zip file.<br>
+            Extract the Zip file and in this file is a Png Image.<br>
+            Looking on this Image and you can see logic gates construction and a instrutcion for the flag.<br>
+            It must set B,C,F,I,J high to get the output high.<br>
+            answer2: CTF{BCFIJ}</p>
+    </details>
+    <h3>NKPNJRCH</h3>
+</body>
