@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../style/ctf.css">
+    <script src="../../../../script/pass.js"></script>
+    <link rel="icon" href="../../../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <a href="https://app.hackthebox.eu/challenges/Illumination" target="_blank">Link</a>
+    <p>
+        download the zip file.<br>
+        unzip Illumination.zip <- with the password: hackthebox<br>
+        This directorie has a git history.<br>
+        git log<br>
+        git commit "47241a47f62ada864ec74bd6dedc4d33f4374699" looks interesting with the message: <br>
+        "Thanks to contributors, I removed the unique token as it was a security risk. Thanks for reporting responsibly!"<br>
+        git show 47241a4<br>
+        The line remove in this commit is a base64 encoded string.<br>
+        "SFRCe3YzcnNpMG5fYzBudHIwbF9hbV9JX3JpZ2h0P30=" with a base64 decoder and you have the Flag. <br>
+        <br>
+        answer: HTB{v3rsi0n_c0ntr0l_am_I_right?}
+    </p>
+</body>
