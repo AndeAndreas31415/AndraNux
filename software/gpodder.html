@@ -105,7 +105,7 @@
         <code><ol>create + edit /opt/gpodder/run.sh<br><br>
                 <ol>#!/bin/bash<br>
                     <br>
-                    kill $( ps $@ -u $USER -o pid,command | grep nginx | grep -v "grep"|awk '{print $1}')<br>
+                    kill $( ps -u $USER -o pid,command | grep nginx | grep -v "grep"|awk '{print $1}')<br>
                     nginx -c /opt/gpodder/nginx.conf<br>
                     cd /opt/gpodder/mygpo<br>
                     source venv/bin/activate<br>
