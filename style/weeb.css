@@ -5,7 +5,7 @@ body.mh,body.ah{
 div.mangas,div.Anime{
   padding: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-flow: wrap;
 }
 
@@ -17,8 +17,8 @@ div.manga,div.serie {
   border-style: dashed;
   border-radius: 25px;
   display: inline-block;
-  margin: 2.5px;
-  padding: 5px;
+  margin: 5px;
+  padding: 10px;
 }
 
 div.manga{
@@ -45,6 +45,20 @@ div.run{
 
 div.im{
   text-align: center;
+}
+
+.sbar{
+  font-size: 150%;
+  font-weight: bold;
+  margin-top: 72px;
+  padding: 15px;
+  width: 175px;
+  height: 50px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #000;
+  box-shadow: 4px 4px 9px 0px #000000 inset;
 }
 
 div.ml,div.al{
