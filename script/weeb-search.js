@@ -3,12 +3,11 @@ function search(term) {
     let x=document.getElementsByClassName(term);
     for (i = 0; i < x.length; i++) { 
         if (!x[i].children[0].innerHTML.toLowerCase().includes(input)) {
-            
             x[i].style.display="none";
-            x[0].style.display="list-item";
+            x[0].style.display="block";
         }
         else {
-            x[i].style.display="list-item";                 
+            x[i].style.display="block";
         }
     }
 }
