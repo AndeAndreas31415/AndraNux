@@ -16,6 +16,9 @@ function shortnam(s) {
         case "A":
             window.location.replace("weeb/anime.html");
             break;
+        case "R":
+            window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            break;
         case "M":
             window.location.replace("weeb/manga.html");
             break;
