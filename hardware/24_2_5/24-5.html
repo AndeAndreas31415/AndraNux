@@ -1,0 +1,62 @@
+<head>
+	<meta charset="UTF-8">
+	<title>24V power Raspi</title>
+	<link rel="stylesheet" href="../../style/hardware.css">
+</head>
+<body>
+	<details open>
+		<summary>German</summary>
+		<p>Ich habe meinen 3D Drucker mit <a href="https://octoprint.org/">Octoprint</a> ausgestatet. 
+		Dafür habe ich ein Raspberry Pi 3B genutzt.
+		Wegen den Raspberry hatte ich ein Netzteil fest verbauen müssen, aber das wollte ich nicht.
+		Deswegen habe ich mir ein DC zu DC Wandler, Kabel und ein paar verschiedene Konnektoren / Verbinder geholt.
+		Angefangen habe ich mit der Messung, wie viel elektrisch Spannung das Netzteil des 3D Drucker ausgibt.</p>
+		<input id="i0" class="sourcebg">
+		<p>Am Netzteil liegen 24V an und deswegen habe ich mich für ein Stepdown converter enschieden.
+		Als nächstes habe ich das Kabel mit Aderenthülsen und ein XT60 Verbinder fertig gemacht.
+		Der XT60 Verbinder ist dafür da wenn man eine Reparatur oder eine Upgrade am Drucker machen möchte.</p>
+		<input id="i1" class="sourcebg">
+		<input id="i2" class="sourcebg">
+		<p>Nachdem ich das Kabel fertig hatte, habe ich mich an die "Platine" gesetzt.
+		Die Lochrasterplatine habe ich als Grundgerüst genommen.
+		Darauf habe ich die Anschlussklemmen für das 1.5mm² Kabel, den Stepdown converter und die USB typ A Buchse befestigt.
+		Bevor ich es ins 3D gedruckte Gehäuse gesteckt habe, habe ich die Ausgangspannung auf 5V gesetzt.</p>
+		<input id="i3" class="sourcebg">
+		<input id="i4" class="sourcebg">
+		<p>Ich habe noch eine Schematische Zeichnung angefertigt wie ich es elektrisch gebaut habe.</p>
+		<input id="i5" class="sourcebg">
+	</details>
+	<details>
+		<summary>English</summary>
+		<p>I equipped my 3D printer with <a href="https://octoprint.org/">Octoprint</a>. 
+		For this I used a Raspberry Pi 3B.
+		Because of the Raspberry I had to install a power supply permanently, but I did not want that.
+		Therefore I grep a DC to DC converter, cables and a few different connectors.
+		I started by measuring how much electrical voltage the power supply of the 3D printer outputs.</p>
+		<input id="i6" class="sourcebg">
+		<p>There are 24V at the power supply and therefore I decided to use a stepdown converter.
+		Next I finished the cable with ferrules and a XT60 connector.
+		The XT60 connector is for when you want to do a repair or an upgrade on the printer.</p>
+		<input id="i7" class="sourcebg">
+		<input id="i8" class="sourcebg">
+		<p>After I finished the cable, I got to work on the "circuit board".
+		I took the breadboard as a basic frame.
+		On it I attached the terminals for the 1.5mm² cable, the stepdown converter and the USB type A socket.
+		Before I put it into the 3D printed case, I set the output voltage to 5V.</p>
+		<input id="i9" class="sourcebg">
+		<input id="i10" class="sourcebg">
+		<p>I made another schematic drawing of how I built it electrically.</p>
+		<input id="i11" class="sourcebg">
+	</details>
+	<script>
+		var sima = document.querySelectorAll(".sourcebg");
+		for (let sita = 0; sita < sima.length; sita++) {
+			document.getElementById(sima[sita].id).type = "image";
+			document.getElementById(sima[sita].id).alt = "img-"+sita % (sima.length/2);
+			document.getElementById(sima[sita].id).src = "img-"+sita % (sima.length/2)+".jpg";
+			document.getElementById(sima[sita].id).onclick = function() {
+				document.location = "img-"+sita % (sima.length/2)+".jpg";
+			};
+		}
+	</script>
+</body>
