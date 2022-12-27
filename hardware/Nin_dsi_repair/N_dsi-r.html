@@ -9,20 +9,20 @@
 		<p>Hey. Ich war auf ebay unterwegs und habe ein Teildefekte Nindendo DSi gekauft.<br>
 		Bestandsaufnahme: Touch vom Touchscreen defekt, linke Schultertaste defekt.<br>
 		Aufgeschraubt und angeschaut.</p>
-		<input id="i0" class="sourcebg" type="image" src="img-0.jpg" alt="img-0">
-		<input id="i1" class="sourcebg" type="image" src="img-1.jpg" alt="img-2">
+		<input id="i0" class="sourcebg">
+		<input id="i1" class="sourcebg">
 		<p>Der Steckverbinder (ZIF) für das Touchscreen Flachbandkable war kaputt.<br>
 		Es hatt ein Verschlussbügel gefehlt um das Flachbandkabel zu fixieren.<br>
 		Ich habe ein stück Klebeband auf die Rückseite des Flachbandkabels geklebt.<br>
 		Und habe das Flachbandkable mit dem Klebeband in die Buchse reingesteckt.<br>
 		Das Touchscreen hatt wieder funktioniert.</p>
-		<input id="i2" class="sourcebg" type="image" src="img-2.jpg" alt="img-1">
+		<input id="i2" class="sourcebg">
 		<p>Es war die linke Schultertaste noch defekt.<br>
 		Ich habe online nach Ersatzteile gesucht und habe nichts passendes gefunden.<br>
 		Deswegen habe ich mich dazu entschlossen das ich den Taster auseinandernehmen und den reinige.</p>
-		<input id="i3" class="sourcebg" type="image" src="img-3.jpg" alt="img-3">
-		<input id="i4" class="sourcebg" type="image" src="img-4.jpg" alt="img-4">
-		<input id="i5" class="sourcebg" type="image" src="img-5.jpg" alt="img-5">
+		<input id="i3" class="sourcebg">
+		<input id="i4" class="sourcebg">
+		<input id="i5" class="sourcebg">
 		<p>Nach der Reinigung musste ich den Metallschild vom Taster wieder festlöten.<br>
 		Zum schlusswar die linke Schultertaste wieder funktionsfähig.</p>
 	</details>
@@ -31,26 +31,29 @@
 		<p>Hey. I was on ebay and bought a partial defect Nindendo DSi.<br>
 		Inventory: Touch defect, left shoulder button defect.<br>
 		Screwed on and looked at.</p>
-		<input id="i6" class="sourcebg" type="image" src="img-0.jpg" alt="img-0">
-		<input id="i7" class="sourcebg" type="image" src="img-1.jpg" alt="img-2">
+		<input id="i6" class="sourcebg">
+		<input id="i7" class="sourcebg">
 		<p>The connector (ZIF) for the touchscreen ribboncable was defect.<br>
 		A locking bracket was missing to fix the cable.<br>
 		I glued a piece of tape to the back of the ribboncable.<br>
 		And I plugged the ribboncable into the socket with the adhesive tape.<br>
 		The touch screen worked again.</p>
-		<input id="i8" class="sourcebg" type="image" src="img-2.jpg" alt="img-1">
+		<input id="i8" class="sourcebg">
 		<p>The left shoulder button was still defect.<br>
 		I searched online for spare parts and didn't find anything suitable.<br>
 		That's why I decided to take the button in aparts and clean it.</p>
-		<input id="i9" class="sourcebg" type="image" src="img-3.jpg" alt="img-3">
-		<input id="i10" class="sourcebg" type="image" src="img-4.jpg" alt="img-4">
-		<input id="i11" class="sourcebg" type="image" src="img-5.jpg" alt="img-5">
+		<input id="i9" class="sourcebg">
+		<input id="i10" class="sourcebg">
+		<input id="i11" class="sourcebg">
 		<p>After cleaning, I had to re-solder the metal plate from the button.<br>
 		Finally, the left shoulder button was functional again.</p> 
 	</details>
 	<script>
 		var sima = document.querySelectorAll(".sourcebg");
 		for (let sita = 0; sita < sima.length; sita++) {
+			document.getElementById(sima[sita].id).type = "image";
+			document.getElementById(sima[sita].id).alt = "img-"+sita % (sima.length/2);
+			document.getElementById(sima[sita].id).src = "img-"+sita % (sima.length/2)+".jpg";
 			document.getElementById(sima[sita].id).onclick = function() {
 				document.location = "img-"+sita % (sima.length/2)+".jpg";
 			};
