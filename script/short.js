@@ -28,6 +28,9 @@ function shortnam(s) {
         case "d":
             window.location.replace("relevant/support.html");
             break;
+        case "g":
+            window.location.replace("https://github.com/AndeAndreas31415/");
+            break;
         case "h":
             window.location.replace("hardware/hi.html");
             break;
