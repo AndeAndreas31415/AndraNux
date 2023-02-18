@@ -32,7 +32,7 @@ function shortnam(s) {
             window.location.replace("https://github.com/AndeAndreas31415/");
             break;
         case "h":
-            window.location.replace("hardware/hi.html");
+            window.location.replace("hardware/index.html");
             break;
         case "i":
             window.location.replace("index.html");
@@ -41,7 +41,7 @@ function shortnam(s) {
             window.location.replace("main.html");
             break;
         case "s":
-            window.location.replace("software/si.html");
+            window.location.replace("software/index.html");
             break;
         default:
             alert("not a valide option");
@@ -54,7 +54,7 @@ function ctf(s) {
     var s = String(s).substring(2);
     switch (s) {
         case "cl":
-            window.location.replace("ctf/ctflearn/i.html");
+            window.location.replace("ctf/ctflearn/index.html");
             break;
         case "cmd":
             window.location.replace("ctf/cmdchallenge.html");
@@ -63,10 +63,10 @@ function ctf(s) {
             window.location.replace("ctf/ctf_withgoogle.html");
             break;
         case "fd":
-            window.location.replace("ctf/Youtube/fd/i.html");
+            window.location.replace("ctf/youtube/fd/index.html");
             break;
         case "htb":
-            window.location.replace("ctf/hackthebox/i.html");
+            window.location.replace("ctf/hackthebox/index.html");
             break;
         case "m":
             window.location.replace("ctf/more_url.html");
