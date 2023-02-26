@@ -19,6 +19,7 @@ div.manga,div.serie {
   display: inline-block;
   margin: 5px;
   padding: 10px;
+  cursor: pointer;
 }
 
 div.manga{
