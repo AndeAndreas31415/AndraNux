@@ -13,27 +13,21 @@ div.back{
 
 div.divclick{
     border-radius: 10px;
-    width: 49%;
+    width: 45%;
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1D201D;
     box-shadow:0 5px 1px 0 #151515;
+    font-weight: bolder;
+    font-size: 150%;
+    color: #12b911;
+    padding: 10px;
 }
 
 div.divclick:hover{
     box-shadow:0 7px 1px 0 #101010 inset;
     cursor: pointer;
-}
-div.divclick:hover a{
     transform: translateY(2px);
-}
-
-div.divclick a{
-    font-weight: bolder;
-    font-size: 150%;
-    color: #12b911;
-    margin: 10px;
-    text-decoration: none;
 }
