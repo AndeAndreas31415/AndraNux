@@ -1,0 +1,31 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Easybox804 Firmware compiled</title>
+</head>
+<body>
+    <p>Setup:
+        <ol>- xubuntu (22.04)<br>
+            - March 2022</ol>
+            <br>
+            Guid:<br>
+        unzip easybox-804_source_code-v8-2.zip -d 804_GPL<br>
+        <br>
+        sudo apt-get update<br>
+        sudo apt-get upgrade<br>
+        sudo apt-get install gcc g++ libmpc-dev mak texinfo bison flex libncurses5-dev libncursesw5-dev gettext ccache xsltproc fop ttf-mscorefonts-installer mklibs libssl-dev dc gawk squashfs-tools<br>
+        <br>
+        <br>
+        Target toolchain:<br>
+        -----------------<br>
+        cat uclibc-crosstools-gcc_source-4.2.4.tar.bz2a* > uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
+        tar -xvjf uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
+        cd buildroot-4.2.4/<br>
+        sudo make<br>
+        <br>
+        run into errors:
+        <ol>- ./package/atk/atk.mk:43
+        <ol>*in line 42 is a "\" missing on the end of the line</ol>
+        - zconf.tab.o undefined reference to `kconf_id_lookup'<br>
+        - zconf.tab.c undefined reference to `kconf_id_lookup'</ol>
+        </p>
+</body>
