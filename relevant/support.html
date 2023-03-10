@@ -2,25 +2,76 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href=../style/4D.css>
-        	<title>Support me</title>
+        <title>Support me</title>
 	</head>
 	<body>
-		<div class="buycoffe">
-			<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Andranux" data-color="#00ff00" data-emoji="🐧" data-font="Arial" data-text="Buy me a Nux" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
+		<div class="back">
+			<div class="flip bmac">
+				<div class="hin text">Buy me a Coffe</div>
+				<div class="hin btn">
+					<input type="button" id="btn1" value="Click me" onclick="window.open('https://www.buymeacoffee.com/Andranux')">
+					<div></div>
+				</div>
+			</div>
+			<div class="flip pat">
+				<div class="hin text">Patreon</div>
+				<div class="hin btn">
+					<input type="button" id="btn2" value="Click me" onclick="window.open('https://www.patreon.com/AndreasAnde2405')">
+					<div></div>
+				</div>
+			</div>
+			<div class="flip pp">
+				<div class="hin text">PayPal</div>
+				<div class="hin btn">
+					<input type="button" id="btn3" value="Click me" onclick="document.getElementById('donate_button').click()">
+					<div></div>
+					<form style="display: none;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+						<input type="hidden" name="cmd" value="_donations">
+						<input type="hidden" name="currency_code" value="EUR">
+						<input type="hidden" name="lc" value="EN">
+						<input type="hidden" name="item_name" value="Andranux">
+						<input type="hidden" name="business" value="andreas_coding@gmx.de">
+						<input type="submit" id="donate_button" value="Paypal">
+					</form>
+				</div>
+			</div>
+			<div class="flip libre">
+				<div class="hin text">Librepay</div>
+				<div class="hin btn">
+					<input type="button" id="btn4" value="Click me" onclick="window.open('https://liberapay.com/And-You/donate')">
+					<div></div>
+				</div>
+			</div>
+			<div class="flip bit">
+				<div class="hin text">Bitcoin</div>
+				<div class="hin btn">
+					<input type="button" id="btn5" value="Click me" onclick="alert('Is in progress.')"">
+					<div></div>
+				</div>
+			</div>
+			<div class="flip idk">
+				<div class="hin text">IDK</div>
+				<div class="hin btn">
+					<input type="button" id="btn6" value="Don't click me" onclick="alert('don\'t click on me')">
+					<div></div>
+				</div>
+			</div>
 		</div>
-		<div class="librepay">
-			<a href="https://liberapay.com/sunknudsen/donate"><img alt="Donate using Liberapay" src="https://raw.githubusercontent.com/aha999/DonateButtons/master/LiberaPay.png"></a>
-		</div>
-		<div class="pp">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-				<input type="hidden" name="cmd" value="_donations">
-				<input type="hidden" name="currency_code" value="EUR">
-				<input type="hidden" name="lc" value="EN">
-				<input type="hidden" name="item_name" value="Andranux">
-				<input type="hidden" name="business" value="andreas_coding@gmx.de">
-				<!--<input type="submit" id="donate_button" value="Paypal">-->
-				<input type="image" src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-			</form>
-		</div>
+		<script>
+			x=document.getElementsByTagName('input');
+			y=document.getElementsByClassName('btn');
+			id=new Array();
+			for (let xi = 0; xi < x.length; xi++) {
+				if (x[xi].type == "button") {
+					id[xi]=x[xi].id;
+				}
+			}
+			ida=id.filter(n => n);
+			for (let idai = 0; idai < ida.length; idai++) {
+				m=document.getElementById(ida[idai]);
+				m.onmouseover = function(){y[idai].children[1].style.opacity=1;}
+				m.onmouseleave = function(){y[idai].children[1].style.opacity=0;}
+			}
+		</script>
 	</body>
 </html>
