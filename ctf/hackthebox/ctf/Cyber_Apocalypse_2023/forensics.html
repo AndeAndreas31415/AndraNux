@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../style/ctf.css">
+    <script src="../../../../script/pass.js"></script>
+    <link rel="icon" href="../../../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+
+    <details>
+        <summary>Plaintext Tleasure</summary>
+        <ol>
+            <details>
+                <summary>Description</summary>
+                <p>Threat intelligence has found that the aliens operate through a command and control server hosted on their infrastructure. Pandora managed to penetrate their defenses and have access to their internal network. Because their server uses HTTP, Pandora captured the network traffic to steal the server's administrator credentials. Open the provided file using Wireshark, and locate the username and password of the admin.</p>
+            </details>
+            <p>xxd capture.pcap|grep -A2 HTB</p>
+        <h3>HTB{th3s3_4l13ns_st1ll_us3_HTTP}</h3></ol>
+    </details>
+    <details>
+        <summary>Alien Cradle</summary>
+        <ol>
+            <details>
+                <summary>Description</summary>
+                <p>In an attempt for the aliens to find more information about the relic, they launched an attack targeting Pandora's close friends and partners that may know any secret information about it. During a recent incident believed to be operated by them, Pandora located a weird PowerShell script from the event logs, otherwise called PowerShell cradle. These scripts are usually used to download and execute the next stage of the attack. However, it seems obfuscated, and Pandora cannot understand it. Can you help her deobfuscate it?</p>
+            </details>
+            <p>cat cradle.ps1|cut -c 396-484|tr -d "\' \+ \'"</p>
+        <h3>HTB{p0w3rsh3ll_Cr4dl3s_c4n_g3t_th3_j0b_d0n3}</h3></ol>
+    </details>
+    <details>
+        <summary>Extraterrestrial Persistence</summary>
+        <ol>
+            <details>
+                <summary>Description</summary>
+                <p>There is a rumor that aliens have developed a persistence mechanism that is impossible to detect. After investigating her recently compromised Linux server, Pandora found a possible sample of this mechanism. Can you analyze it and find out how they install their persistence?</p>
+            </details>
+            <p>cat persistence.sh<br>
+                copy from script:<br>
+                echo -e "W1VuaXRdCkRlc2NyaXB0aW9uPUhUQnt0aDNzM180bDEzblNfNHIzX3MwMDAwMF9iNHMxY30KQWZ0ZXI9bmV0d29yay50YXJnZXQgbmV0d29yay1vbmxpbmUudGFyZ2V0CgpbU2VydmljZV0KVHlwZT1vbmVzaG90ClJlbWFpbkFmdGVyRXhpdD15ZXMKCkV4ZWNTdGFydD0vdXNyL2xvY2FsL2Jpbi9zZXJ2aWNlCkV4ZWNTdG9wPS91c3IvbG9jYWwvYmluL3NlcnZpY2UKCltJbnN0YWxsXQpXYW50ZWRCeT1tdWx0aS11c2VyLnRhcmdldA=="|base64 --decode<br>
+                run the command<br>
+                under [Unit] after Description find the flag</p>
+        <h3>HTB{th3s3_4l13nS_4r3_s00000_b4s1c}</h3></ol>
+    </details>
+</body>

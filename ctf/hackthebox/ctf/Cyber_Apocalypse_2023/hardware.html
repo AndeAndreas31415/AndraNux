@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../style/ctf.css">
+    <script src="../../../../script/pass.js"></script>
+    <link rel="icon" href="../../../icon_ctf.png">
+    <title>CTF-Index</title>
+</head>
+<body>
+    <details>
+        <summary>Timed Transmission</summary>
+        <ol><details>
+            <summary>Description</summary>
+            <p>As part of your initialization sequence, your team loaded various tools into your system, but you still need to learn how to use them effectively. They have tasked you with the challenge of finding the appropriate tool to open a file containing strange serial signals. Can you rise to the challenge and find the right tool?</p>
+        </details>
+        <p>after an online search I found out the file with .sal extension can i open in Saleae<br>
+        open the file in Saleae and zoom out</p>
+        <h3>HTB{b391N_tH3_HArdWAr3_QU3St}</h3></ol>
+    </details>
+    <details>
+        <summary>Critical Flight</summary>
+        <ol><details>
+            <summary>Description</summary>
+            <p>Your team has assigned you to a mission to investigate the production files of Printed Circuit Boards for irregularities. This is in response to the deployment of nonfunctional DIY drones that keep falling out of the sky. The team had used a slightly modified version of an open-source flight controller in order to save time, but it appears that someone had sabotaged the design before production. Can you help identify any suspicious alterations made to the boards?</p>
+        </details>
+        <p>open HadesMicro-B_Cu.gbr and HadesMicro-In1_Cu.gbr<br>
+        typing the flag</p>
+        <h3>HTB{533_7h3_1nn32_w02k1n95_0f_313c720n1c5#$@}</h3></ol>
+    </details>
+    <details>
+        <summary>Debug</summary>
+        <ol><details>
+            <summary>Description</summary>
+            <p>Your team has recovered a satellite dish that was used for transmitting the location of the relic, but it seems to be malfunctioning. There seems to be some interference affecting its connection to the satellite system, but there are no indications of what it could be. Perhaps the debugging interface could provide some insight, but they are unable to decode the serial signal captured during the device's booting sequence. Can you help to decode the signal and find the source of the interference?</p>
+        </details>
+        <p>open the file in Saleae<br>
+        It's lokking like a serial signal.<br>
+        In the tab "Analyzers" setup Async Serial.<br>
+        Set Input-Channel to D1-RX and bit rate 112500<br>
+        By Data in Terminal mode in the bottem find the flag.</p>
+        <h3>HTB{547311173_n37w02k_c0mp20m153d}</h3></ol>
+    </details>
+</body>
