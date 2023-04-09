@@ -3,29 +3,139 @@
 	<title>Easybox804 Firmware compiled</title>
 </head>
 <body>
-    <p>Setup:
-        <ol>- xubuntu (22.04)<br>
-            - March 2022</ol>
-            <br>
-            Guid:<br>
-        unzip easybox-804_source_code-v8-2.zip -d 804_GPL<br>
+    <p>
+        Now that I have an Easybox 804 at home which I no longer need, I am considering what to do with the device.<br>The default firmware is okay for most users who are not looking to make any advanced or custom configurations to their device.<br>It provides the necessary features and functions for basic use and should work reliably without any issues.<br>However, for more experienced or technically savvy users who require specific settings or functions,<br>they may want to consider upgrading to a more advanced firmware or compile the Firmware herself that can offer greater flexibility and customization options.<br>It is recommended to set up a virtual machine for compiling the firmware.<br>
         <br>
-        sudo apt-get update<br>
-        sudo apt-get upgrade<br>
-        sudo apt-get install gcc g++ libmpc-dev mak texinfo bison flex libncurses5-dev libncursesw5-dev gettext ccache xsltproc fop ttf-mscorefonts-installer mklibs libssl-dev dc gawk squashfs-tools<br>
+        I came across a few links during my online research.<br>
+        1-Link:<a href="https://openwrt.org/toh/vodafone/vodafone_station_revolution" target="_blank">OpenWrt Wiki</a><br>
+        2-Link:<a href="https://www.vodafone.de/business/hilfe-support/support-firmware-easybox-804-dsl-modem.html" target="_blank">Official Product Site</a>
         <br>
         <br>
-        Target toolchain:<br>
-        -----------------<br>
-        cat uclibc-crosstools-gcc_source-4.2.4.tar.bz2a* > uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
-        tar -xvjf uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
-        cd buildroot-4.2.4/<br>
-        sudo make<br>
+        After writing an email to Vodafone's support team, you will receive the source code for the firmware.
         <br>
-        run into errors:
-        <ol>- ./package/atk/atk.mk:43
-        <ol>*in line 42 is a "\" missing on the end of the line</ol>
-        - zconf.tab.o undefined reference to `kconf_id_lookup'<br>
-        - zconf.tab.c undefined reference to `kconf_id_lookup'</ol>
+        I get the source Code zip file in the 08.02 version.<br>
+        In this zip file is the source Code and more stuff:
+        <ol>
+            - gcc-4.8.3.tar.bz2<br>
+            - jpkg_bcm9636x_vodafone_vox25_de_gpl.lic<br>
+            - jsl-0.3.0-src.tar.gz<br>
+            - texinfo_4.13a.dfsg.1-10_i386.deb<br>
+            - uclibc-crosstools-gcc_source-4.2.4.tar.bz2aa<br>
+            - uclibc-crosstools-gcc_source-4.2.4.tar.bz2ab<br>
+            - libsass-master092916.zip<br>
+            - sassc-master092916.zip<br>
+            - sass-spec-master092916.zip<br>
+            - CIS804_5_4_8_1_325_1_44_gpl.tar.bz2aa<br>
+            - CIS804_5_4_8_1_325_1_44_gpl.tar.bz2ab
+        </ol>
+        They exist 2 Ways to compile the Firmware.<br>
+        <ol>- Default Way (Is in the Readme of the zip file)<br>- Modern Way (Is my way in 2023 with a 64bit system)</ol>
+    </p>
+    <details>
+        <summary>Default Way</summary>
+        <p>Required:
+            <ol>Kubuntu 14.04.2 LTS 32-bit</ol>
         </p>
+        <p>
+            Build Instructions
+            <ol>unzip the zip file with the source code to a ordner with out a Space char in the name<br>
+                cd in this ordner<br>
+                <br>
+                Host toolchain:
+                <ol>
+                    #/ sudo apt-get update<br>
+                    #/ sudo apt-get install gcc g++ libmpc-dev make<br>
+                    #/ tar -xvjf gcc-4.8.3.tar.bz2<br>
+                    #/ cd gcc-4.8.3<br>
+                    #/ ./configure -v --enable-languages=c,c++ --program-suffix=-4.8 --enable-threads=posix --prefix=/usr<br>
+                    #/ make<br>
+                    #/ sudo make install<br>
+                    #/ cd ..
+                </ol>
+                <br>
+                Target toolchain:
+                <ol>
+                    1. Downgrade textinfo to 4.13 version:<br>
+                    #/ sudo apt-get remove texinfo<br>
+                    #/ sudo dpkg -i texinfo_4.13a.dfsg.1-10_i386.deb<br>
+                    <br>
+                    2. Build toolchain for MIPS target:<br>
+                    #/ sudo apt-get install bison flex libncurses5-dev libncursesw5-dev gettext<br>
+                    #/ cat uclibc-crosstools-gcc_source-4.2.4.tar.bz2a* > uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
+                    #/ tar -xvjf uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
+                    #/ cd buildroot-4.2.4/<br>
+                    - edit this file /package/atk/atk.mk (in line 42 is a "\" missing on the end of the line)<br>
+                    #/ sudo make<br>
+                    #/ cd ..<br>
+                    <br>
+                    3. Create link to toolchain under openrg directory:<br>
+                    #/ sudo mkdir -p /usr/local/openrg<br>
+                    #/ sudo ln -s /opt/toolchains/uclibc-crosstools-gcc-4.2.4/usr /usr/local/openrg/mips-brcm-linux-uclibc
+                </ol>
+                <br>
+                JavaScript analysis tool:
+                <ol>
+                    1. Build JSLint:<br>
+                    #/ tar -xvzf jsl-0.3.0-src.tar.gz<br>
+                    #/ cd jsl-0.3.0/src<br>
+                    #/ make -f Makefile.ref<br>
+                    <br>
+                    2. Copy jsl under openrg directory:<br>
+                    #/ sudo mkdir -p /usr/local/openrg/bin/<br>
+                    #/ sudo mkdir -p /usr/local/openrg/i686-jungo-linux-gnu<br>
+                    #/ sudo cp Linux_All_DBG.OBJ/jsl /usr/local/openrg/bin/<br>
+                    #/ cd ../..
+                </ol>
+                <br>
+                SCSS:<br>
+                <ol>
+                    #/ unzip libsass-master092916.zip<br>
+                    #/ unzip sass-spec-master092916.zip<br>
+                    #/ unzip sassc-master092916.zip<br>
+                    #/ mv sass-spec-master sass-spec<br>
+                    #/ cd sassc-master<br>
+                    #/ export SASS_LIBSASS_PATH=../libsass-master<br>
+                    #/ make<br>
+                    #/ sudo cp bin/sassc /usr/local/openrg/bin<br>
+                    #/ cd ..<br>
+                </ol>
+                <br>
+                OpenRG GPL:<br>
+                <ol>
+                    1. Install utils required for compilation:<br>
+                    #/ sudo apt-get install ccache xsltproc fop msttcorefonts python mklibs libssl-dev dc gawk squashfs-tools<br>
+                    <br>
+                    2. Fix SSL library location issue:<br>
+                    #/ sudo ln -s /lib/i386-linux-gnu/libssl.so.1.0.0 /usr/lib/libssl.so<br>
+                    <br>
+                    3. Build OpenRG GPL:<br>
+                    #/ export I386_TOOLS_PREFIX=/usr<br>
+                    #/ cat CIS804_5_4_8_1_325_1_44_gpl.tar.bz2a* > CIS804_5_4_8_1_325_1_44_gpl.tar.bz2<br>
+                    #/ tar -xvjf CIS804_5_4_8_1_325_1_44_gpl.tar.bz2 && cd ./rg<br>
+                    #/ make config CONFIG_RG_USE_LOCAL_TOOLCHAIN=y LIC=./../jpkg_bcm9636x_vodafone_vox25_de_gpl.lic CONFIG_RG_GPL=y DIST=VOX_2.5_DE_VDSL && make<br>
+                    <br>
+                    4. OpenRG GPL image:<br>
+                    ./build/os/linux/vmlinux
+            
+                </ol>
+            </ol>
+        </p>
+    </details>
+    <details>
+        <summary>Modern Way</summary>
+        <p>Required:
+            <ol>-My choice: Xubuntu 22.04 LTS 64bit<br>*or any Ubuntu distro or maybe Linux Mint / Debian based distro<br>
+                -different version of uclibc
+            </ol>
+        </p>
+        <p>
+            Build Instructions
+            <ol>
+            unzip the zip file with the source code to a ordner with out a Space char in the name<br>
+            cd in this ordner<br>
+            <br>
+            </ol>
+        </p>
+        <h1>This not ready. If i have more time, than can I complet this Instructions</h1>
+    </details>
 </body>
