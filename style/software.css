@@ -1,4 +1,4 @@
-html,body{
+html,sibody{
     background-color: #1a1a1a;
     margin: 0;
 }
@@ -7,13 +7,16 @@ div.back{
     width: 100%;
     background-color: #1a1a1a;
     display:flex;
+    flex-flow: wrap;
     justify-content:space-evenly;
     padding: 20px 0;
 }
 
 div.divclick{
     border-radius: 10px;
+    margin: 5px;
     width: 45%;
+    min-width: 45%;
     height: 10%;
     display: flex;
     justify-content: center;
@@ -30,4 +33,10 @@ div.divclick:hover{
     box-shadow:0 7px 1px 0 #101010 inset;
     cursor: pointer;
     transform: translateY(2px);
+}
+
+/*samsung article*/
+th,td{
+  border: 1px solid #dddddd;
+  padding: 4px;
 }

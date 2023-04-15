@@ -1,0 +1,55 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Samsung flashen 2023</title>
+	<link rel="stylesheet" href="../style/software.css">
+	<style>html{background-color: white;}</style>
+</head>
+<body>
+	<p>
+		I write about flashing Samsung smartphones on this website.<br>
+		If you need more information about a special device read the officle wiki from the recovery img.
+	</p>
+	<ol>
+		Tobics:
+		<ol>
+			<a href="#win">1.Windows</a><br>
+			<a href="#lin">2.Linux</a><br>
+			<a href="#err">3.Troubleshooting (SamFirm)</a>
+		</ol>
+	</ol>
+	<br>
+	<p>
+		<a name="win">1.Windows</a><br>
+		The Way to go is a tool with the name "Odin"<br>
+		They existing an alternative tool with the name "Heimdall"<br>
+		Odin is proprietary sofftware and Heimdall is FOSS (Free/Libre Open Source Software)
+		<br>
+		Odin:<br>
+		-You must load the recovery img in Odin in the AP field.<br>
+		-click on the start button<br>
+		<br>
+		Heimdall:<br>
+		-read this <a href="https://raw.githubusercontent.com/Benjamin-Dobell/Heimdall/master/Win32/README.txt">Instructions</a> under Flashing Firmware Frontend
+	</p>
+	<br>
+	<p>
+		<a name="lin">2.Linux</a><br>
+		under linux existing 2 Ways:<br>
+		"adb and Fastboot" or "Heimdall"<br>
+		<br>
+		adb and Fastboot:<br>
+		- adb reboot boatloader<br>
+		- <i>fastboot oem unlock OR fastboot flashing unlock</i> &lt;- is not every needed<br>
+		- fastboot flash recovery <i>recovery.img</i><br>
+		<br>
+		Heimdall:<br>
+		- read this <a href="https://raw.githubusercontent.com/Benjamin-Dobell/Heimdall/master/Linux/README">Instructions</a>
+	</p>
+	<br>
+	<p>
+		<a name="err">3.Troubleshooting</a><br>
+		If your device are not correct booting, than can you download the stock firmware from Samsung and install it .<br>
+		The Officle way is create an Account on Mobile Samsung and download the firmware.<br>
+		The better and unofficle way is download "Samfirm" and than download the firmware over this tool without an Account.<br>
+	</p>
+</body>
