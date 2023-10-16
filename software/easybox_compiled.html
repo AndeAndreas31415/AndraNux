@@ -38,88 +38,88 @@
         </p>
         <p>
             Build Instructions
-            <ol>unzip the zip file with the source code to a ordner with out a Space char in the name<br>
-                cd in this ordner<br>
-                <br>
-                Host toolchain:
-                <ol>
-                    #/ sudo apt-get update<br>
-                    #/ sudo apt-get install gcc g++ libmpc-dev make<br>
-                    #/ tar -xvjf gcc-4.8.3.tar.bz2<br>
-                    #/ cd gcc-4.8.3<br>
-                    #/ ./configure -v --enable-languages=c,c++ --program-suffix=-4.8 --enable-threads=posix --prefix=/usr<br>
-                    #/ make<br>
-                    #/ sudo make install<br>
-                    #/ cd ..
-                </ol>
-                <br>
-                Target toolchain:
-                <ol>
-                    1. Downgrade textinfo to 4.13 version:<br>
-                    #/ sudo apt-get remove texinfo<br>
-                    #/ sudo dpkg -i texinfo_4.13a.dfsg.1-10_i386.deb<br>
-                    <br>
-                    2. Build toolchain for MIPS target:<br>
-                    #/ sudo apt-get install bison flex libncurses5-dev libncursesw5-dev gettext<br>
-                    #/ cat uclibc-crosstools-gcc_source-4.2.4.tar.bz2a* > uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
-                    #/ tar -xvjf uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
-                    #/ cd buildroot-4.2.4/<br>
-                    - edit this file /package/atk/atk.mk (in line 42 is a "\" missing on the end of the line)<br>
-                    #/ sudo make<br>
-                    #/ cd ..<br>
-                    <br>
-                    3. Create link to toolchain under openrg directory:<br>
-                    #/ sudo mkdir -p /usr/local/openrg<br>
-                    #/ sudo ln -s /opt/toolchains/uclibc-crosstools-gcc-4.2.4/usr /usr/local/openrg/mips-brcm-linux-uclibc
-                </ol>
-                <br>
-                JavaScript analysis tool:
-                <ol>
-                    1. Build JSLint:<br>
-                    #/ tar -xvzf jsl-0.3.0-src.tar.gz<br>
-                    #/ cd jsl-0.3.0/src<br>
-                    #/ make -f Makefile.ref<br>
-                    <br>
-                    2. Copy jsl under openrg directory:<br>
-                    #/ sudo mkdir -p /usr/local/openrg/bin/<br>
-                    #/ sudo mkdir -p /usr/local/openrg/i686-jungo-linux-gnu<br>
-                    #/ sudo cp Linux_All_DBG.OBJ/jsl /usr/local/openrg/bin/<br>
-                    #/ cd ../..
-                </ol>
-                <br>
-                SCSS:<br>
-                <ol>
-                    #/ unzip libsass-master092916.zip<br>
-                    #/ unzip sass-spec-master092916.zip<br>
-                    #/ unzip sassc-master092916.zip<br>
-                    #/ mv sass-spec-master sass-spec<br>
-                    #/ cd sassc-master<br>
-                    #/ export SASS_LIBSASS_PATH=../libsass-master<br>
-                    #/ make<br>
-                    #/ sudo cp bin/sassc /usr/local/openrg/bin<br>
-                    #/ cd ..<br>
-                </ol>
-                <br>
-                OpenRG GPL:<br>
-                <ol>
-                    1. Install utils required for compilation:<br>
-                    #/ sudo apt-get install ccache xsltproc fop msttcorefonts python mklibs libssl-dev dc gawk squashfs-tools<br>
-                    <br>
-                    2. Fix SSL library location issue:<br>
-                    #/ sudo ln -s /lib/i386-linux-gnu/libssl.so.1.0.0 /usr/lib/libssl.so<br>
-                    <br>
-                    3. Build OpenRG GPL:<br>
-                    #/ export I386_TOOLS_PREFIX=/usr<br>
-                    #/ cat CIS804_5_4_8_1_325_1_44_gpl.tar.bz2a* > CIS804_5_4_8_1_325_1_44_gpl.tar.bz2<br>
-                    #/ tar -xvjf CIS804_5_4_8_1_325_1_44_gpl.tar.bz2 && cd ./rg<br>
-                    #/ make config CONFIG_RG_USE_LOCAL_TOOLCHAIN=y LIC=./../jpkg_bcm9636x_vodafone_vox25_de_gpl.lic CONFIG_RG_GPL=y DIST=VOX_2.5_DE_VDSL && make<br>
-                    <br>
-                    4. OpenRG GPL image:<br>
-                    ./build/os/linux/vmlinux
-            
-                </ol>
-            </ol>
         </p>
+        <ol>
+            unzip the zip file with the source code to a ordner with out a Space char in the name<br>
+            cd in this ordner<br>
+            <br>
+            Host toolchain:
+            <ol>
+                $/ sudo apt-get update<br>
+                $/ sudo apt-get install gcc g++ libmpc-dev make<br>
+                $/ tar -xvjf gcc-4.8.3.tar.bz2<br>
+                $/ cd gcc-4.8.3<br>
+                $/ ./configure -v --enable-languages=c,c++ --program-suffix=-4.8 --enable-threads=posix --prefix=/usr<br>
+                $/ make<br>
+                $/ sudo make install<br>
+                $/ cd ..
+            </ol>
+            <br>
+            Target toolchain:
+            <ol>
+                1. Downgrade textinfo to 4.13 version:<br>
+                $/ sudo apt-get remove texinfo<br>
+                $/ sudo dpkg -i texinfo_4.13a.dfsg.1-10_i386.deb<br>
+                <br>
+                2. Build toolchain for MIPS target:<br>
+                $/ sudo apt-get install bison flex libncurses5-dev libncursesw5-dev gettext<br>
+                $/ cat uclibc-crosstools-gcc_source-4.2.4.tar.bz2a* > uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
+                $/ tar -xvjf uclibc-crosstools-gcc_source-4.2.4.tar.bz2<br>
+                $/ cd buildroot-4.2.4/<br>
+                - edit this file /package/atk/atk.mk (in line 42 is a "\" missing on the end of the line)<br>
+                $/ sudo make<br>
+                $/ cd ..<br>
+                <br>
+                3. Create link to toolchain under openrg directory:<br>
+                $/ sudo mkdir -p /usr/local/openrg<br>
+                $/ sudo ln -s /opt/toolchains/uclibc-crosstools-gcc-4.2.4/usr /usr/local/openrg/mips-brcm-linux-uclibc
+            </ol>
+            <br>
+            JavaScript analysis tool:
+            <ol>
+                1. Build JSLint:<br>
+                $/ tar -xvzf jsl-0.3.0-src.tar.gz<br>
+                $/ cd jsl-0.3.0/src<br>
+                $/ make -f Makefile.ref<br>
+                <br>
+                2. Copy jsl under openrg directory:<br>
+                $/ sudo mkdir -p /usr/local/openrg/bin/<br>
+                $/ sudo mkdir -p /usr/local/openrg/i686-jungo-linux-gnu<br>
+                $/ sudo cp Linux_All_DBG.OBJ/jsl /usr/local/openrg/bin/<br>
+                $/ cd ../..
+            </ol>
+            <br>
+            SCSS:<br>
+            <ol>
+                $/ unzip libsass-master092916.zip<br>
+                $/ unzip sass-spec-master092916.zip<br>
+                $/ unzip sassc-master092916.zip<br>
+                $/ mv sass-spec-master sass-spec<br>
+                $/ cd sassc-master<br>
+                $/ export SASS_LIBSASS_PATH=../libsass-master<br>
+                $/ make<br>
+                $/ sudo cp bin/sassc /usr/local/openrg/bin<br>
+                $/ cd ..<br>
+            </ol>
+            <br>
+            OpenRG GPL:<br>
+            <ol>
+                1. Install utils required for compilation:<br>
+                $/ sudo apt-get install ccache xsltproc fop msttcorefonts python mklibs libssl-dev dc gawk squashfs-tools<br>
+                <br>
+                2. Fix SSL library location issue:<br>
+                $/ sudo ln -s /lib/i386-linux-gnu/libssl.so.1.0.0 /usr/lib/libssl.so<br>
+                <br>
+                3. Build OpenRG GPL:<br>
+                $/ export I386_TOOLS_PREFIX=/usr<br>
+                $/ cat CIS804_5_4_8_1_325_1_44_gpl.tar.bz2a* > CIS804_5_4_8_1_325_1_44_gpl.tar.bz2<br>
+                $/ tar -xvjf CIS804_5_4_8_1_325_1_44_gpl.tar.bz2 && cd ./rg<br>
+                $/ make config CONFIG_RG_USE_LOCAL_TOOLCHAIN=y LIC=./../jpkg_bcm9636x_vodafone_vox25_de_gpl.lic CONFIG_RG_GPL=y DIST=VOX_2.5_DE_VDSL && make<br>
+                <br>
+                4. OpenRG GPL image:<br>
+                ./build/os/linux/vmlinux
+            </ol>
+        </ol>
     </details>
     <details>
         <summary>Modern Way</summary>
@@ -130,12 +130,12 @@
         </p>
         <p>
             Build Instructions
-            <ol>
-            unzip the zip file with the source code to a ordner with out a Space char in the name<br>
-            cd in this ordner<br>
-            <br>
-            </ol>
         </p>
+        <ol>
+        unzip the zip file with the source code to a ordner with out a Space char in the name<br>
+        cd in this ordner<br>
+        <br>
+        </ol>
         <h1>This not ready. If i have more time, than can I complet this Instructions</h1>
     </details>
 </body>
