@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../style/ctf.css">
+    <script src="../../../../script/pass.js"></script>
+    <link rel="icon" href="../../../icon_ctf.png">
+    <title>DBH 23</title>
+</head>
+<body>
+    <p>Am 31.05.2023 hat die Abteilung Cybercrime (CC) des Bundeskriminalamts (BKA) den Rechner eines Verdächtigen beschlagnahmt. Auf dem sichergestellten Rechner haben die Beamten eine .kdbx-Datenbank gefunden, die zu einem Passwortmanager gehört. Leider ist diese verschlüsselt, wodurch die Beamten keinen Zugriff auf die darin gespeicherten Passwörter haben. Sie konnten jedoch zusätzlich eine Datei namens KeePass.DMP sicherstellen. Kannst du dem BKA dabei helfen, die Passwort-Datenbank zu entschlüsseln?<br>
+        <br>
+        Dateien: passwords.kdbx and KeePass.DMP<br>
+        <br>
+    </p>
+    <h3>Lösung:</h3>
+    <p>
+        https://github.com/vdohney/keepass-password-dumper/<br>
+        Combined: ●{3, N, c, d, e, f, g, -, #, W, X, C, 0, ;}deutschlands00_00B3ST3R00_00Hack3r2023<br>
+        <br>
+        script.sh #automate with xdotool for<br>
+    </p>
+    <ol>#!/bin/bash<br>
+        <br>
+        stuff=$(echo -e "3\nN\nc\nd\ne\nf\ng\n-\n#\nW\nX\nC\n0\n;")<br>
+        <br>
+        for i in {33..126}; do<br>
+            for c in $stuff; do <br>
+                echo $(printf \\$(printf '%03o' $i)$(echo $c)deutschlands00_00B3ST3R00_00Hack3r2023)<br>
+                xdotool type -window 60817414 $(printf \\$(printf '%03o' $i)$(echo $c)deutschlands00_00B3ST3R00_00Hack3r2023)<br>
+                sleep 0.75<br>
+                xdotool key -window 60817414 Enter<br>
+                sleep 0.75<br>
+                xdotool key -window 60817414 BackSpace<br>
+                sleep 0.75<br>
+            done<br>
+        done
+    </ol>
+    <p>
+        Password for the Keepass file:<br>
+        &#60;3deutschlands00_00B3ST3R00_00Hack3r2023<br>
+        <br>
+        Database &#62; entry: DBH &#62; Password field<br>
+        flag: DBH{D3utsch1ands_b3s73r_HACKER2023}
+    </p>
+</body>
+</html>
